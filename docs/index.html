@@ -1,0 +1,1920 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="./assets/fonts/Mont-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Mont-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Mont-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Mont-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="shortcut icon" href="./assets/img/favicons/favicon.ico">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/favicon-192x192.png">
+		<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon/favicon-512x512.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/favicon-180x180.png">
+		<meta name="msapplication-TileImage" content="assets/img/favicon/mstile-270x270.png">
+		<meta name="msapplication-TileColor" content="#1A1F35">
+		<title>POSH Packaging Design</title>
+		<style>
+			[data-fls-ticker]{--ticker-distance:0rem;--ticker-duration:80s;overflow:hidden;width:max-content;display:flex;align-items:center;cursor:pointer}[data-fls-ticker]>*{display:flex;flex-wrap:nowrap;flex:0 0 auto;min-width:max-content;will-change:transform}@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--ticker-distance)))}}@keyframes ticker-scroll-reverse{from{transform:translateX(calc(-1 * var(--ticker-distance)))}to{transform:translateX(0)}}.ticker-header__item{font-weight:600;font-size:.75rem;text-transform:uppercase;color:var(--black)}.ticker-header__item p{padding-right:.625rem;margin-right:.625rem;position:relative}.ticker-header__item p::after{content:"";position:absolute;right:-.1875rem;top:50%;transform:translate(0,-75%);width:.1875rem;height:.1875rem;border-radius:50%;background-color:var(--black)}.swiper{overflow:hidden}.swiper-initialized{touch-action:pan-y}.swiper-wrapper{width:100%;height:100%;box-sizing:content-box;display:flex;position:relative}.swiper-vertical .swiper-wrapper{flex-direction:column}.swiper-autoheight .swiper-wrapper{align-items:flex-start}.swiper-initialized .swiper-slide{flex-shrink:0}.swiper-android .swiper-slide,.swiper-android .swiper-wrapper{transform:translate3d(0,0,0)}.swiper-button-lock{display:none!important}.swiper-3d,.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:75rem}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide,.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-cards .swiper-slide{transform-origin:center bottom;backface-visibility:hidden;overflow:hidden}.swiper.swiper-cards{overflow:visible}.swiper-cards ::slotted(swiper-slide){transform-origin:center bottom;backface-visibility:hidden;overflow:hidden}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}
+		</style>
+		<script type="module" crossorigin="" src="./js/common.min.js?v=1778077557881"></script>
+		<script type="module" crossorigin="" src="./js/popup.min.js?v=1778077557881"></script>
+		<script type="module" crossorigin="" src="./js/index.min2.js?v=1778077557881"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1778077557881">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min2.css?v=1778077557881">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1778077557881">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header data-fls-header="" class="header">
+				<div class="header__top top-header">
+					<div class="top-header__container">
+						<div class="top-header__about about-header">
+							<div class="about-header__item">
+								<img class="about-header__img" data-img-ignore="" fetchpriority="high" src="./assets/img/icons/icon-a-4.webp" height="27" width="20" alt="Image">
+								<div class="about-header__txt">
+									<p>AVAILABLE AND OPEN TO WORK</p>
+								</div>
+							</div>
+							<div class="about-header__item">
+								<img class="about-header__img" data-img-ignore="" fetchpriority="high" src="./assets/img/icons/icon-a-1.webp" height="27" width="20" alt="Image">
+								<div class="about-header__txt">
+									<p>WE STAY WITH YOU UNTIL YOU HIT THE SHELVES</p>
+								</div>
+							</div>
+							<div class="about-header__item">
+								<img class="about-header__img" data-img-ignore="" fetchpriority="high" src="./assets/img/icons/icon-a-2.webp" height="27" width="20" alt="Image">
+								<div class="about-header__txt">
+									<p>WE WARN YOU ABOUT RISKS</p>
+								</div>
+							</div>
+							<div class="about-header__item">
+								<img class="about-header__img" data-img-ignore="" fetchpriority="high" src="./assets/img/icons/icon-a-3.webp" height="27" width="20" alt="Image">
+								<div class="about-header__txt">
+									<p>WE CARE HOW DESIGN WORKS</p>
+								</div>
+							</div>
+							<div class="about-header__item item-pc-hidden">
+								<div class="top-header__link">
+									<p class="top-header__link-txt">WORLDWIDE AVAILABLE</p>
+								</div>
+							</div>
+						</div>
+						<div class="top-header__right">
+							<div class="top-header__link">
+								<p class="top-header__link-txt">WORLDWIDE AVAILABLE</p>
+							</div>
+							<ul class="top-header__list">
+								<li class="top-header__item">
+									<a href="index-uk.html" class="top-header__lang" aria-label="switch to ukranian language">UKR</a>
+								</li>
+								<li class="top-header__item">
+									<a href="index.html" class="top-header__lang" aria-label="switch to english language">ENG</a>
+								</li>
+								<li class="top-header__item">
+									<a href="index-ru.html" class="top-header__lang" aria-label="switch to russian language">RU</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="header__main main-header">
+					<div class="main-header__container">
+						<div class="main-header__logo">
+							<img fetchpriority="high" src="./assets/img/icons/logo.svg" width="200" height="45" alt="logo Posh Packagin Design">
+						</div>
+						<div class="main-header__right">
+							<nav class="main-header__nav">
+								<ul class="main-header__list">
+									<li class="main-header__item">
+										<a href="#gallery" data-go-link="gallery" class="main-header__link" aria-label="link to the block">Cases</a>
+									</li>
+									<li class="main-header__item">
+										<a href="#cost" data-go-link="cost" class="main-header__link" aria-label="link to the block">Timing</a>
+									</li>
+									<li class="main-header__item">
+										<a href="#cost" data-go-link="cost" class="main-header__link" aria-label="link to the block">Pricing</a>
+									</li>
+									<li class="main-header__item">
+										<a href="#footer" data-go-link="footer" class="main-header__link" aria-label="link to the block">Contacts</a>
+									</li>
+								</ul>
+							</nav>
+							<a href="#" data-fls-popup-link="popup--contacts" data-fls-btn="" class="main-header__btn btn btn--2 --icon-arrowrightb" aria-label="open popup">
+								<span class="btn-txt">Contact us</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="page page--index">
+				<section class="hero">
+					<div class="hero__top">
+						<div class="hero__container">
+							<h1 class="hero__title title-hero">PACKAGING DESIGN FOR FMCG BRANDS</h1>
+							<div class="hero__subtitle">
+								<p>
+									We follow market trends, create emotion, make brands more relevant and packaging more efficient
+								</p>
+							</div>
+							<ul class="hero__btns btns-hero">
+								<li class="btns-hero__item item-pc">
+									<a href="brief" data-fls-btn="" class="btns-hero__btn btn btn--2 font-reg --icon-arrowrightb" aria-label="open brief page">
+										<span class="btn-txt">Fill out a simple brief</span>
+									</a>
+								</li>
+								<li class="btns-hero__item">
+									<a href="#" data-fls-popup-link="popup--estimate" data-fls-btn="" class="btns-hero__btn btn btn--2 font-bold --icon-arrowrightb" aria-label="open popup">
+										<span class="btn-txt">Get a project estimate</span>
+									</a>
+								</li>
+								<li class="btns-hero__item item-pc">
+									<a href="#" data-fls-popup-link="popup--presentation" data-fls-btn="" class="btns-hero__btn btn btn--2 font-reg --icon-arrowrightb" aria-label="open popup">
+										<span class="btn-txt">PDF presentation</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="products br-r">
+					<div class="products__container">
+						<div class="products__body">
+							<h2 class="products__title">
+								We understand business,
+								<br>
+								not just design.
+							</h2>
+							<div class="products__texts">
+								<div class="products__subtitle t-1">
+									<p>
+										For over 12 years we’ve helped FMCG companies launch and strengthen products with strategically designed packaging
+									</p>
+								</div>
+								<div class="products__subtxt t-2">
+									<p>
+										We don't design for the sake of design. We build product positioning on real consumer behaviour, retail requirements, and marketing goals. We dig deep into every project, assemble the right team and stay with you from first idea to
+							final print.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-fls-marquee="" data-fls-marquee-speed="400" class="products__clients">
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-1.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-2.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-3.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-4.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-5.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-6.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-7.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-8.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-9.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-10.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-11.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-12.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-13.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-14.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-15.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-16.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-17.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-18.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-19.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-20.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-21.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-22.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-23.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-24.webp">
+							</picture>
+						</div>
+						<div class="products__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/clients/clients-25.webp">
+							</picture>
+						</div>
+					</div>
+				</section>
+				<section data-gsap="trust" data-gsap-end="40%" class="trust br-r">
+					<div class="trust__container">
+						<div class="trust__body">
+							<h2 class="trust__title t-1">
+								<span>Trusted by those</span>
+								<br>
+								who know the cost
+								<br>
+								of a mistake on the shelf
+							</h2>
+							<ul data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="1" class="trust__counters counters-trust">
+								<li class="counters-trust__item">
+									<div class="counters-trust__num">
+										<span data-fls-digcounter="" data-fls-digcounter-speed="1500">12</span>
+										+
+									</div>
+									<p>years in FMCG</p>
+								</li>
+								<li class="counters-trust__item">
+									<div class="counters-trust__num">
+										<span data-fls-digcounter="" data-fls-digcounter-speed="1800">500</span>
+										+
+									</div>
+									<p>projects delivered</p>
+								</li>
+								<li class="counters-trust__item">
+									<div class="counters-trust__num">
+										<span data-fls-digcounter="" data-fls-digcounter-speed="2500">100</span>
+										+
+									</div>
+									<p>returning clients</p>
+								</li>
+							</ul>
+						</div>
+						<div class="trust__img">
+							<picture>
+								<source media="(max-width: 500px)" srcset="./assets/img/trust-hand-500.webp" type="image/webp">
+								<source media="(max-width: 1200px)" srcset="./assets/img/trust-hand-1200.webp" type="image/webp">
+								<img loading="lazy" width="793" height="901" alt="Image" src="./assets/img/trust-hand.webp">
+							</picture>
+						</div>
+					</div>
+				</section>
+				<section class="solutions br-r">
+					<div class="solutions__container">
+						<h2 class="solutions__title t-3">Solutions</h2>
+						<ul class="solutions__list">
+							<li class="solutions__item item-solutions">
+								<div class="item-solutions__title t-4">
+									<p>
+										<span>Missed</span>
+										deadlines — launch collapses entirely?
+									</p>
+								</div>
+								<span class="item-solutions__arr --icon-arrowrightd"></span>
+								<div class="item-solutions__txt t-5">
+									<p>
+										Every stage is clearly documented and locked in. Our processes are controlled and predictable. You'll get results on schedule.
+									</p>
+								</div>
+							</li>
+							<li class="solutions__item item-solutions">
+								<div class="item-solutions__title t-4">
+									<p>
+										<span>Design focused on “beauty”</span>
+										rather than sales?
+									</p>
+								</div>
+								<span class="item-solutions__arr --icon-arrowrightd"></span>
+								<div class="item-solutions__txt t-5">
+									<p>
+										We design packaging around customer behavior, brand goals, and business needs. It shouldn't just look good — it has to work.
+									</p>
+								</div>
+							</li>
+							<li class="solutions__item item-solutions">
+								<div class="item-solutions__title t-4">
+									<p>
+										<span>Everyone pulls work</span>
+										in a different direction
+										<span>without clear positioning?</span>
+									</p>
+								</div>
+								<span class="item-solutions__arr --icon-arrowrightd"></span>
+								<div class="item-solutions__txt t-5">
+									<p>
+										We set the brand’s direction and emotion so the packaging meets consumer expectations. Everything is logical, aligned, and cohesive.
+									</p>
+								</div>
+							</li>
+							<li class="solutions__item item-solutions">
+								<div class="item-solutions__title t-4">
+									<p>
+										<span>Revisions without</span>
+										any direction — no one understands what is right
+									</p>
+								</div>
+								<span class="item-solutions__arr --icon-arrowrightd"></span>
+								<div class="item-solutions__txt t-5">
+									<p>
+										We integrate into your team's process to ensure that every decision is based on hypothesis, logic, and analysis. No chaos — only deliberate moves.
+									</p>
+								</div>
+							</li>
+							<li class="solutions__item item-solutions">
+								<div class="item-solutions__title t-4">
+									<p>
+										<span>Perfect on screen.</span>
+										A disaster in print.
+									</p>
+								</div>
+								<span class="item-solutions__arr --icon-arrowrightd"></span>
+								<div class="item-solutions__txt t-5">
+									<p>
+										We bring a production designer on board and take it all the way to print. What you get looks like the mockups.
+									</p>
+								</div>
+							</li>
+							<li class="solutions__item item-solutions">
+								<div class="item-solutions__title t-4">
+									<p>
+										<span>Nice, but not “wow.”</span>
+										It should be “wow.”
+									</p>
+								</div>
+								<span class="item-solutions__arr --icon-arrowrightd"></span>
+								<div class="item-solutions__txt t-5">
+									<p>
+										“Wow” isn't a fluke — it's the outcome. We dig into the product, find its uniqueness, choose the right narrative and visual codes.
+									</p>
+								</div>
+							</li>
+						</ul>
+						<div class="solutions__banner banner">
+							<div class="banner__block">
+								<p class="banner__title">
+									<span class="banner__img">
+										<picture>
+											<img width="65" height="65" alt="Image" src="./assets/img/banner.webp">
+										</picture>
+									</span>
+									<span class="banner__txt t-1">
+										<b>Let's</b>
+										discuss your
+										<br>
+										task right now
+									</span>
+									<span class="banner__subtxt t-5">We’ll propose a solution fast!</span>
+								</p>
+							</div>
+							<div class="banner__contacts">
+								<div class="banner__social">
+									<a href="#" class="banner__link" aria-label="link">
+										<img src="./assets/img/icons/tg.svg" width="46" height="46" alt="Image">
+									</a>
+									<a href="#" class="banner__link" aria-label="link">
+										<img src="./assets/img/icons/wts.svg" width="46" height="46" alt="Image">
+									</a>
+								</div>
+								<a href="#" data-fls-btn="" data-fls-popup-link="popup--form" class="banner__btn btn btn--4" aria-label="link">
+									<span class="btn-txt">Send a request</span>
+									<span class="btn-arr --icon-arrowrightb"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div data-go-id="gallery" class="solutions__gallery gallery" data-fls-gallerys="">
+						<div data-fls-marquee="" data-fls-marquee-pause="" data-fls-marquee-speed="500" data-fls-marquee-drag="" class="gallery__line">
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-1-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-1-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-1-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-1-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 1" src="./assets/img/cases/case-1.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-2-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-2-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-2-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-2-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 2" src="./assets/img/cases/case-2.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-3-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-3-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-3-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-3-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 3" src="./assets/img/cases/case-3.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-4-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-4-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-4-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-4-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 4" src="./assets/img/cases/case-4.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-5-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-5-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-5-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-5-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 5" src="./assets/img/cases/case-5.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-6-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-6-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-6-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-6-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 6" src="./assets/img/cases/case-6.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-7-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-7-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-7-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-7-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 7" src="./assets/img/cases/case-7.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-8-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-8-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-8-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-8-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 8" src="./assets/img/cases/case-8.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-9-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-9-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-9-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-9-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 9" src="./assets/img/cases/case-9.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-10-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-10-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-10-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-10-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 10" src="./assets/img/cases/case-10.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-11-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-11-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-11-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-11-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 11" src="./assets/img/cases/case-11.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-12-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-12-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-12-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-12-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 12" src="./assets/img/cases/case-12.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-13-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-13-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-13-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-13-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 13" src="./assets/img/cases/case-13.webp">
+									</picture>
+								</button>
+							</div>
+						</div>
+						<div data-fls-marquee="" data-fls-marquee-pause="" data-fls-marquee-speed="500" data-fls-marquee-direction="right" data-fls-marquee-drag="" class="gallery__line">
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-14-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-14-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-14-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-14-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 14" src="./assets/img/cases/case-14.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-15-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-15-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-15-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-15-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 15" src="./assets/img/cases/case-15.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-16-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-16-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-16-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-16-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 16" src="./assets/img/cases/case-16.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-17-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-17-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-17-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-17-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 17" src="./assets/img/cases/case-17.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-18-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-18-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-18-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-18-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 18" src="./assets/img/cases/case-18.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-19-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-19-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-19-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-19-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 19" src="./assets/img/cases/case-19.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-20-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-20-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-20-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-20-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 20" src="./assets/img/cases/case-20.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-21-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-21-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-21-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-21-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 21" src="./assets/img/cases/case-21.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-22-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-22-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-22-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-22-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 22" src="./assets/img/cases/case-22.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-23-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-23-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-23-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-23-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 23" src="./assets/img/cases/case-23.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-24-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-24-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-24-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-24-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 24" src="./assets/img/cases/case-24.webp">
+									</picture>
+								</button>
+							</div>
+							<div class="gallery__item">
+								<button type="button" class="gallery__thumb" data-gallery-item="" data-src-mobile="assets/img/cases/fullscreen/case-25-mob.webp" data-src-desktop="assets/img/cases/fullscreen/case-25-pc.webp" aria-label="open image">
+									<picture>
+										<source media="(max-width: 500px)" srcset="./assets/img/cases/case-25-500.webp" type="image/webp">
+										<source media="(max-width: 1200px)" srcset="./assets/img/cases/case-25-1200.webp" type="image/webp">
+										<img loading="lazy" alt="case 25" src="./assets/img/cases/case-25.webp">
+									</picture>
+								</button>
+							</div>
+						</div>
+						<div class="gallery__fullscreen" data-gallery-fullscreen="" data-lenis-prevent="" aria-hidden="true">
+							<div class="gallery__overlay" data-gallery-overlay=""></div>
+							<figure class="gallery__figure">
+								<img src="" alt="" class="gallery__image" data-gallery-image="">
+								<button type="button" class="gallery__close btn btn--3" data-fls-btn="" data-gallery-close="" aria-label="close">
+									<span class="btn-txt">Close</span>
+									<span class="btn-arr --icon-arrowrightb"></span>
+								</button>
+							</figure>
+						</div>
+					</div>
+					<div class="solutions__container">
+						<div class="solutions__team team-solutions">
+							<h3 class="team-solutions__title t-6" data-fls-watcher="" data-fls-watcher-once="">
+								<b>
+									Professional team
+									<br>
+									engaged
+								</b>
+								at
+								<span class="team-solutions__img">
+									<picture>
+										<img width="95" height="38" alt="Image" src="./assets/img/team.webp">
+									</picture>
+								</span>
+								<span data-fls-digcounter="" data-fls-digcounter-speed="2000">100</span>
+								%
+							</h3>
+							<div class="team-solutions__video">
+								<video data-fls-videoplay="" muted loop playsinline="" preload="none" data-lazy-video="">
+									<source data-src="assets/video/team.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div class="team-solutions__txt t-5">
+								<p>
+									Our team has 15 specialists, each a true professional. Together we create real synergy and handle every key task — from big-picture strategy to meticulous print-ready design.
+								</p>
+								<p>
+									We’re united by shared values, transparent processes,
+						and a constant drive to grow. That’s what helps us improve products, make brands more visible, and amplify their voice every day.
+								</p>
+							</div>
+						</div>
+						<div class="solutions__presentation presentation-solutions">
+							<div class="presentation-solutions__txt">
+								<p class="t-7">
+									<b>Our presentation</b>
+								</p>
+								<p class="t-8">Download so you don’t lose us</p>
+							</div>
+							<div class="presentation-solutions__pdf">
+								<a href="#" data-fls-popup-link="popup--presentation" data-fls-btn="" class="presentation-solutions__btn btn btn--2 --icon-arrowrightc" aria-label="download">
+									<span class="btn-txt">Download PDF</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-gsap="process" data-gsap-end="20%" class="process br-r">
+					<div class="process__container">
+						<h2 class="process__title t-3">Process</h2>
+						<div data-fls-spollers="" data-fls-spollers-one="" class="process__spollers spollers-process">
+							<details class="spollers-process__item">
+								<summary class="spollers-process__summary --icon-arrowdownb">
+									<span class="spollers-process__num t-9">01</span>
+									<span class="spollers-process__title t-10">Onboarding</span>
+								</summary>
+								<div class="spollers-process__body">
+									<div class="spollers-process__content">
+										<div class="spollers-process__info t-5">
+											<p>
+												The manager accepts your request, collects initial data, and helps formulate the task. We analyze the request, confirm readiness, and prepare a commercial offer.
+											</p>
+										</div>
+										<div class="spollers-process__media hero-3d-process" data-fls-model="" data-3d-src="files/glb/handshake.glb"></div>
+									</div>
+								</div>
+							</details>
+							<details class="spollers-process__item">
+								<summary class="spollers-process__summary --icon-arrowdownb">
+									<span class="spollers-process__num t-9">02</span>
+									<span class="spollers-process__title t-10">Positioning</span>
+								</summary>
+								<div class="spollers-process__body">
+									<div class="spollers-process__content">
+										<div class="spollers-process__info t-5">
+											<p>
+												We dive into market research, competitors, trends, and consumer triggers. Then we develop 2–3 positioning concepts, suggest style references, and build out your brand communication strategy
+											</p>
+										</div>
+										<div class="spollers-process__media hero-3d-process" data-fls-model="" data-3d-src="files/glb/navigation.glb"></div>
+									</div>
+								</div>
+							</details>
+							<details class="spollers-process__item">
+								<summary class="spollers-process__summary --icon-arrowdownb">
+									<span class="spollers-process__num t-9">03</span>
+									<span class="spollers-process__title t-10">Technical brief</span>
+								</summary>
+								<div class="spollers-process__body">
+									<div class="spollers-process__content">
+										<div class="spollers-process__info t-5">
+											<p>
+												We lock in the chosen direction as our strategic path forward.
+									Then we create a detailed brief, align on deliverables
+									and timelines, and kick off the project
+											</p>
+										</div>
+										<div class="spollers-process__media hero-3d-process" data-fls-model="" data-3d-src="files/glb/check_list.glb"></div>
+									</div>
+								</div>
+							</details>
+							<details class="spollers-process__item">
+								<summary class="spollers-process__summary --icon-arrowdownb">
+									<span class="spollers-process__num t-9">04</span>
+									<span class="spollers-process__title t-10">Conceptions</span>
+								</summary>
+								<div class="spollers-process__body">
+									<div class="spollers-process__content">
+										<div class="spollers-process__info t-5">
+											<p>
+												We develop at least 3 concepts applied to 2–3 product formats. Every concept is production-ready and built for easy scalability
+											</p>
+										</div>
+										<div class="spollers-process__media hero-3d-process" data-fls-model="" data-3d-src="files/glb/bottle.glb"></div>
+									</div>
+								</div>
+							</details>
+							<details class="spollers-process__item">
+								<summary class="spollers-process__summary --icon-arrowdownb">
+									<span class="spollers-process__num t-9">05</span>
+									<span class="spollers-process__title t-10">Presentation</span>
+								</summary>
+								<div class="spollers-process__body">
+									<div class="spollers-process__content">
+										<div class="spollers-process__info t-5">
+											<p>
+												We present our work for your team with realistic mockups showing
+									the product in context — like on a supermarket shelf. We discuss everything together, collect feedback, and refine the concept based on your notes and requests
+											</p>
+										</div>
+										<div class="spollers-process__media hero-3d-process" data-fls-model="" data-3d-src="files/glb/speech.glb"></div>
+									</div>
+								</div>
+							</details>
+							<details class="spollers-process__item">
+								<summary class="spollers-process__summary --icon-arrowdownb">
+									<span class="spollers-process__num t-9">06</span>
+									<span class="spollers-process__title t-10">SKU rollout</span>
+								</summary>
+								<div class="spollers-process__body">
+									<div class="spollers-process__content">
+										<div class="spollers-process__info t-5">
+											<p>
+												We roll out the approved concept across other SKUs, tailoring each one to its specific needs. Brand identity and the concept stays cohesive across the product line. We design all sides according
+									to the dielines, then incorporate all your edits and feedback
+											</p>
+										</div>
+										<div class="spollers-process__media hero-3d-process" data-fls-model="" data-3d-src="files/glb/unfolding.glb"></div>
+									</div>
+								</div>
+							</details>
+							<details class="spollers-process__item">
+								<summary class="spollers-process__summary --icon-arrowdownb">
+									<span class="spollers-process__num t-9">07</span>
+									<span class="spollers-process__title t-10">Pre‑press</span>
+								</summary>
+								<div class="spollers-process__body">
+									<div class="spollers-process__content">
+										<div class="spollers-process__info t-5">
+											<p>
+												We prepare print-ready design files according to your print shop technical requirements. This includes color separation and Pantone matching. We write up detailed specs for the print shop and handle any technical questions directly
+									with them
+											</p>
+										</div>
+										<div class="spollers-process__media hero-3d-process" data-fls-model="" data-3d-src="files/glb/box.glb"></div>
+									</div>
+								</div>
+							</details>
+						</div>
+					</div>
+				</section>
+				<section class="guarantee br-r">
+					<div class="guarantee__container">
+						<h2 class="guarantee__title t-3">Guarantees</h2>
+						<div class="guarantee__body">
+							<div class="guarantee__video">
+								<!-- <img loading="lazy" src="@files/anim.gif" width="578" height="578" alt="Image"> -->
+								<video data-fls-videoplay="" muted loop playsinline="" preload="none" data-lazy-video="">
+									<source data-src="assets/video/guarantee.mp4" type="video/mp4">
+								</video>
+							</div>
+							<div data-fls-spollers="" data-fls-spollers-one="" class="guarantee__spollers spollers-guarantee">
+								<details class="spollers-guarantee__item">
+									<summary class="spollers-guarantee__summary t-10 --icon-arrowdowna">
+										<span>No extra fees</span>
+									</summary>
+									<div class="spollers-guarantee__body">
+										<div class="spollers-guarantee__content t-5">
+											<p>
+												We provide a transparent estimate before starting
+									work and do not require additional
+									payments
+									beyond the agreed cost.
+											</p>
+										</div>
+									</div>
+								</details>
+								<details class="spollers-guarantee__item">
+									<summary class="spollers-guarantee__summary t-10 --icon-arrowdowna">
+										<span>Print quality</span>
+									</summary>
+									<div class="spollers-guarantee__body">
+										<div class="spollers-guarantee__content t-5">
+											<p>
+												We guarantee flawless print-ready files and handle
+									all the technical details. The print shop will know exactly
+									what to do — no input needed from you
+											</p>
+										</div>
+									</div>
+								</details>
+								<details class="spollers-guarantee__item">
+									<summary class="spollers-guarantee__summary t-10 --icon-arrowdowna">
+										<span>Patent clearance</span>
+									</summary>
+									<div class="spollers-guarantee__body">
+										<div class="spollers-guarantee__content t-5">
+											<p>
+												We check every design element for copyright clearance
+									to avoid any legal risks or issues
+											</p>
+										</div>
+									</div>
+								</details>
+								<details class="spollers-guarantee__item">
+									<summary class="spollers-guarantee__summary t-10 --icon-arrowdowna">
+										<span>Relevance</span>
+									</summary>
+									<div class="spollers-guarantee__body">
+										<div class="spollers-guarantee__content t-5">
+											<p>
+												Your packaging will meet your business goals,
+									resonate with consumers, and stay right on trend
+											</p>
+										</div>
+									</div>
+								</details>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-gsap="retail" data-gsap-end="45%" class="retail br-r">
+					<div class="retail__container">
+						<div class="retail__body">
+							<div class="retail__bg">
+								<picture>
+									<source media="(max-width: 500px)" srcset="./assets/img/retail/retail-main-500.webp" type="image/webp">
+									<img loading="lazy" width="251" height="220" alt="Image" src="./assets/img/retail/retail-main.webp">
+								</picture>
+							</div>
+							<div class="retail__content">
+								<h2 class="retail__title t-9">100+ projects across
+						20+ retail chains
+						worldwide.</h2>
+								<div class="retail__subtitle t-2">
+									<p>Via private-label, distributor contracts, or direct partnerships.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-fls-marquee="" data-fls-marquee-speed="400" class="retail__items">
+						<div class="retail__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-1.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-2.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<source media="(max-width: 500px)" srcset="./assets/img/retail/retail-3-500.webp" type="image/webp">
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-3.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-4.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-5.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-6.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-7.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-8.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<source media="(max-width: 500px)" srcset="./assets/img/retail/retail-9-500.webp" type="image/webp">
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-9.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-10.webp">
+							</picture>
+						</div>
+						<div class="retail__img">
+							<picture>
+								<img loading="lazy" width="125" height="115" alt="Image" src="./assets/img/retail/retail-11.webp">
+							</picture>
+						</div>
+					</div>
+				</section>
+				<section class="cost-guarantee br-r">
+					<div class="cost-guarantee__container">
+						<div class="cost-guarantee__head">
+							<h2 class="cost-guarantee__title t-3">How Do we Determine
+					the Cost?</h2>
+							<div class="cost-guarantee__subtitle t-5">
+								<p>
+									The price is calculated individually, but always logically and transparently. The final cost of the project is influenced by: the availability of clear technical specifications or an existing brand positioning concept; the amount of input
+						data at the outset; urgency;
+						the number of SKUs in the range and, of course, the prospects for further cooperation.
+								</p>
+							</div>
+						</div>
+						<div data-go-id="cost" data-fls-slider="" class="cost-guarantee__slider swiper">
+							<ul class="cost-guarantee__wrapper swiper-wrapper">
+								<li class="cost-guarantee__slide swiper-slide">
+									<div class="cost-guarantee__body">
+										<div class="cost-guarantee__head-slide">
+											<div class="cost-guarantee__title-slide t-10">
+												<p>
+													Concept
+													<br>
+													Development
+												</p>
+											</div>
+											<div class="cost-guarantee__subtitle-slide t-2">
+												<p>
+													without technical
+													<br>
+													specifications:
+												</p>
+											</div>
+											<div class="cost-guarantee__price t-10">
+												<p>≈ €3000</p>
+												<p>≈ 22 bd’s</p>
+											</div>
+										</div>
+										<ul class="cost-guarantee__list t-5">
+											<li class="cost-guarantee__item">
+												<p>Analyze and discuss the task</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Market research</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Create hypotheses</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Propose positioning</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Build a strategy</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Draw up technical specifications</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Concepts development</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Presentation and discussion</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>We make suggestions and adjustments</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>We agree on the concept</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>We pass the concept on to you</p>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="cost-guarantee__slide swiper-slide">
+									<div class="cost-guarantee__body">
+										<div class="cost-guarantee__head-slide">
+											<div class="cost-guarantee__title-slide t-10">
+												<p>
+													Concept
+													<br>
+													Development
+												</p>
+											</div>
+											<div class="cost-guarantee__subtitle-slide t-2">
+												<p>
+													according to your
+													<br>
+													technical specifications:
+												</p>
+											</div>
+											<div class="cost-guarantee__price t-10">
+												<p>≈ €2000</p>
+												<p>≈ 15 bd’s</p>
+											</div>
+										</div>
+										<ul class="cost-guarantee__list t-5">
+											<li class="cost-guarantee__item">
+												<p>Analyze and discuss the task</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Clarify details and references</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Offer additional ideas</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Concepts development</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Presentation and discussion</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Suggestions and adjustments</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Agree on the concept</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>We pass the concept on to you</p>
+											</li>
+										</ul>
+										<a href="#" data-fls-popup-link="popup--guide" class="cost-guarantee__link --icon-arrowrightd t-2" aria-label="open popup guide">
+											<span>How to create a perfect technical brief?</span>
+										</a>
+									</div>
+								</li>
+								<li class="cost-guarantee__slide swiper-slide">
+									<div class="cost-guarantee__body">
+										<div class="cost-guarantee__head-slide">
+											<div class="cost-guarantee__title-slide t-10">
+												<p>
+													SKU
+													<br>
+													Development
+												</p>
+											</div>
+											<div class="cost-guarantee__subtitle-slide t-2">
+												<p>
+													The first product in the new line.
+													<br>
+													Within the approved concept.
+												</p>
+											</div>
+											<div class="cost-guarantee__price t-10">
+												<p>≈ €850</p>
+												<p>≈ 7 bd’s</p>
+											</div>
+										</div>
+										<ul class="cost-guarantee__list t-5">
+											<li class="cost-guarantee__item">
+												<p>Collect data</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Create technical specifications</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Develop 2–3 options</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Mock-up, 3D visualization</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Presentation and discussion</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Develop a layout in a cut</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Make adjustments</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Agree on the layout</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Prepare files</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Prepare for printing</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Compile printing instructions</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Transfer working files</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Transfer 3D visualization</p>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="cost-guarantee__slide swiper-slide">
+									<div class="cost-guarantee__body">
+										<div class="cost-guarantee__head-slide">
+											<div class="cost-guarantee__title-slide t-10">
+												<p>
+													SKU
+													<br>
+													Extension
+												</p>
+											</div>
+											<div class="cost-guarantee__subtitle-slide t-2">
+												<p>
+													New position
+													<br>
+													for existing product line
+												</p>
+											</div>
+											<div class="cost-guarantee__price t-10">
+												<p>≈ €200</p>
+												<p>≈ 3 bd’s</p>
+											</div>
+										</div>
+										<ul class="cost-guarantee__list t-5">
+											<li class="cost-guarantee__item">
+												<p>Collect data</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Create technical specifications</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Develop 2–3 options</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Mock-up, 3D visualization</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Presentation and discussion</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Develop a layout in a cut</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Make adjustments</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Agree on the layout</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Prepare files</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Prepare for printing</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Compile printing instructions</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Transfer working files</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Transfer 3D visualization</p>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="cost-guarantee__slide swiper-slide">
+									<div class="cost-guarantee__body">
+										<div class="cost-guarantee__head-slide">
+											<div class="cost-guarantee__title-slide t-10">
+												<p>
+													Additional
+													<br>
+													Services
+												</p>
+											</div>
+											<div class="cost-guarantee__subtitle-slide t-2">
+												<p>
+													Technical and consultancy
+													<br>
+													support for your brand
+												</p>
+											</div>
+											<div class="cost-guarantee__price t-10">
+												<p></p>
+												<p></p>
+											</div>
+										</div>
+										<ul class="cost-guarantee__list t-5">
+											<li class="cost-guarantee__item">
+												<p>Design supervision</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Brand audit</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Naming</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Focus groups</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>POS materials</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Expo materials</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Promo website</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Sales presentation</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>3D modelling</p>
+											</li>
+											<li class="cost-guarantee__item">
+												<p>Structural design</p>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section data-gsap="fill-form" data-gsap-end="45%" class="fill-form br-r">
+					<div class="fill-form__container">
+						<div class="fill-form__body">
+							<div class="fill-form__content">
+								<h2 class="fill-form__title t-7">Start your project right now.</h2>
+								<div class="fill-form__txt t-11">
+									<p>Tell us about your idea
+							using our easy form.</p>
+								</div>
+								<div class="fill-form__cta">
+									<a href="brief" data-fls-btn="" class="fill-form__btn btn btn--4" aria-label="link">
+										<span class="btn-txt">Complete the checklist</span>
+										<span class="btn-arr --icon-arrowrightb"></span>
+									</a>
+									<div class="fill-form__cta-t t-12">
+										<p>only 7 min of your time</p>
+									</div>
+								</div>
+							</div>
+							<div class="fill-form__images">
+								<picture>
+									<img loading="lazy" width="243" height="362" alt="Image" src="./assets/img/fill-form.webp">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="faq br-r">
+					<div class="faq__container">
+						<h2 class="faq__title t-3">FAQ</h2>
+						<div data-fls-spollers="" data-fls-spollers-one="" class="faq__spollers spollers-guarantee">
+							<details class="spollers-guarantee__item">
+								<summary class="spollers-guarantee__summary t-4 --icon-arrowdowna">
+									<span>How is the development cost formed?</span>
+								</summary>
+								<div class="spollers-guarantee__body">
+									<div class="spollers-guarantee__content t-5">
+										<p>
+											Project costs are based on amount of the initial data, required timelines, research complexity, and the number of concepts and revisions. Put simply, we estimate
+								the hours needed
+								to complete the work. The cost reflects the time and scope, so more complex projects naturally require a larger investment.
+										</p>
+									</div>
+								</div>
+							</details>
+							<details class="spollers-guarantee__item">
+								<summary class="spollers-guarantee__summary t-4 --icon-arrowdowna">
+									<span>Why should we choose
+							your agency?</span>
+								</summary>
+								<div class="spollers-guarantee__body">
+									<div class="spollers-guarantee__content t-5">
+										<p>
+											We recommend choosing a team you communicate with easily — a partner who grasps not just the creative vision, but also the commercial and technical realities of your project. If you feel comfortable with our team and confident in our
+								competence, why look elsewhere?
+										</p>
+									</div>
+								</div>
+							</details>
+							<details class="spollers-guarantee__item">
+								<summary class="spollers-guarantee__summary t-4 --icon-arrowdowna">
+									<span>How should packaging design
+							be evaluated?</span>
+								</summary>
+								<div class="spollers-guarantee__body">
+									<div class="spollers-guarantee__content t-5">
+										<p>
+											The true measure of a packaging design isn’t just its beauty, but its power to drive sales. We evaluate our designs against three core criteria: emotional appeal, contextual relevance to the target audience, and its conversion
+								properties. This framework ensures our feedback is objective and focused on performance, not subjective opinion.
+										</p>
+									</div>
+								</div>
+							</details>
+							<details class="spollers-guarantee__item">
+								<summary class="spollers-guarantee__summary t-4 --icon-arrowdowna">
+									<span>What if we don’t like the result?</span>
+								</summary>
+								<div class="spollers-guarantee__body">
+									<div class="spollers-guarantee__content t-5">
+										<p>
+											Our process is designed to prevent this. Before any design work begins, our specialists meticulously review the project brief to ensure we are perfectly aligned on all goals and to eliminate any inaccuracies. This detailed preparation
+								ensures that the initial concepts we present are already on the right track and ready for refinement.
+										</p>
+									</div>
+								</div>
+							</details>
+						</div>
+						<div class="faq__reviews reviews">
+							<h2 class="faq__title t-3">Reviews</h2>
+							<div data-fls-slider="" class="reviews__slider swiper">
+								<div class="reviews__wrapper swiper-wrapper">
+									<article class="reviews__slide slide-reviews swiper-slide">
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__head">
+												<div class="slide-reviews__ic">
+													<picture>
+														<img width="107" height="41" alt="Image" src="./assets/img/companys/company-1.webp">
+													</picture>
+												</div>
+												<div class="slide-reviews__info">
+													<h3 class="slide-reviews__name t-13">Khurshid Kodirov</h3>
+													<p class="slide-reviews__position t-14">Head of Marketing</p>
+												</div>
+											</div>
+											<div class="slide-reviews__txt t-2">
+												<p>
+													<b>
+														We found synergy with POSH right away. We're still working together: it's always easy, pleasant, and stress-free!
+													</b>
+												</p>
+												<p>
+													My team and I feel like we're in good hands: the managers are always available, explain everything clearly, and keep us updated on the project's progress.
+												</p>
+												<p>
+													They don't just develop beautiful designs — they know their stuff. How the shelf works, what is important to a manager in a supermarket chain, how consumers think. This is very useful knowledge that the guys are happy to share. We
+										are confident that even more great results await us in the future!
+												</p>
+												<p>We are grateful to the team for their excellent work and humane attitude!</p>
+											</div>
+										</div>
+									</article>
+									<article class="reviews__slide slide-reviews swiper-slide">
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__head">
+												<div class="slide-reviews__ic">
+													<picture>
+														<img width="107" height="41" alt="Image" src="./assets/img/companys/company-2.webp">
+													</picture>
+												</div>
+												<div class="slide-reviews__info">
+													<h3 class="slide-reviews__name t-13">Anastasiia Kolesnikova</h3>
+													<p class="slide-reviews__position t-14">Lead Private-Label Specialist</p>
+												</div>
+											</div>
+											<div class="slide-reviews__txt t-2">
+												<p>
+													<b>Working on the POSH project exceeded our expectations.</b>
+												</p>
+												<p>
+													We were looking for an agency that could take a comprehensive approach to our complex task: to immerse themselves, conduct research, and, most importantly, justify their decisions.
+												</p>
+												<p>
+													We got that and much more! A systematic approach, an up-to-date vision of the market, advice, and fresh ideas. The team kept us constantly informed, and the management was on point: timings, deadlines, clear briefings.
+												</p>
+												<p>
+													It was very comfortable to work with, without stress or overload. What seemed like a complex task at first glance turned into enjoyable work. Special thanks for respecting the client's time!
+												</p>
+											</div>
+										</div>
+									</article>
+									<article class="reviews__slide slide-reviews swiper-slide">
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__head">
+												<div class="slide-reviews__ic">
+													<picture>
+														<img width="107" height="41" alt="Image" src="./assets/img/companys/company-3.webp">
+													</picture>
+												</div>
+												<div class="slide-reviews__info">
+													<h3 class="slide-reviews__name t-13">Yuliia Tkachenko</h3>
+													<p class="slide-reviews__position t-14">Deputy Director for Development and Retail Chains Sales</p>
+												</div>
+											</div>
+											<div class="slide-reviews__txt t-2">
+												<p>
+													<b>With POSH, it's always somehow special, easy, and inspiring.</b>
+												</p>
+												<p>
+													Last year, thanks to POSH's developments, we updated 80% of our packaging — and it had a great result! The new design is not just “beautiful”; it's about character, mood, and attention to detail. Consumers have three seconds at
+										the shelf to make a decision — I like it, I want to buy it.
+												</p>
+												<p>
+													With POSH, it's not just packaging — in 2025, we implemented a project for the modern museum of the Lukas company — and again, it was all about style, attention to detail, understanding our history, and important aspects.
+												</p>
+												<p>Thank you for your creativity and true partnership. We want more! 💛</p>
+											</div>
+										</div>
+									</article>
+									<article class="reviews__slide slide-reviews swiper-slide">
+										<div class="slide-reviews__body">
+											<div class="slide-reviews__head">
+												<div class="slide-reviews__ic">
+													<picture>
+														<img width="107" height="41" alt="Image" src="./assets/img/companys/company-4.webp">
+													</picture>
+												</div>
+												<div class="slide-reviews__info">
+													<h3 class="slide-reviews__name t-13">Odil Ibrahim</h3>
+													<p class="slide-reviews__position t-14">CEO</p>
+												</div>
+											</div>
+											<div class="slide-reviews__txt t-2">
+												<p>
+													<b>
+														Dear POSH Branding team, I would like to express my sincere gratitude for your work on the label designs for our products.
+													</b>
+												</p>
+												<p>
+													We have received a lot of positive feedback from both partners and end consumers. They note the bright, modern style, thoughtful details, and visual consistency with the brand. It is especially gratifying to see that the design is
+										not only aesthetically appealing but also works effectively on the shelf.
+												</p>
+												<p>
+													Thank you for your attentive approach to the tasks, efficiency, and high level of creativity. We look forward to continuing our successful collaboration and implementing new projects together with your team.
+												</p>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer data-fls-footer="" data-go-id="footer" data-gsap="footer" data-gsap-end="0%" class="footer">
+				<div class="footer__bg-video">
+					<video class="ibg" data-fls-videoplay="" muted loop playsinline="" preload="none" data-lazy-video="">
+						<source data-src="assets/video/posh-showreel-short-pc.mp4" type="video/mp4" media="(min-width: 30.061em)">
+						<source data-src="assets/video/posh-showreel-short-mb.mp4" type="video/mp4">
+					</video>
+					<picture>
+						<source media="(max-width: 500px)" srcset="./assets/img/poster-pc-500.webp" type="image/webp">
+						<source media="(max-width: 1200px)" srcset="./assets/img/poster-pc-1200.webp" type="image/webp">
+						<img class="footer__poster ibg" width="1440" height="800" alt="image" src="./assets/img/poster-pc.webp">
+					</picture>
+				</div>
+				<div class="footer__container">
+					<div class="footer__title title-hero">
+						<p>
+							<span>
+								So, you’ve reached
+								<br>
+								the end of the site -
+							</span>
+							<br>
+							what’s next?
+						</p>
+					</div>
+					<div class="footer__contacts contacts-footer">
+						<div class="contacts-footer__img">
+							<picture>
+								<img loading="lazy" width="229" height="270" alt="Image" src="./assets/img/manager.webp">
+							</picture>
+						</div>
+						<address class="contacts-footer__info">
+							<div class="contacts-footer__name t-6">
+								<p>Veronika</p>
+							</div>
+							<div class="contacts-footer__position t-15">
+								<p>your account manager</p>
+							</div>
+							<ul class="contacts-footer__social">
+								<li class="contacts-footer__item">
+									<a href="#" class="contacts-footer__link" aria-label="social">
+										<img src="./assets/img/icons/tg.svg" width="46" height="46" alt="Image">
+									</a>
+								</li>
+								<li class="contacts-footer__item">
+									<a href="#" class="contacts-footer__link" aria-label="social">
+										<img src="./assets/img/icons/wts.svg" width="46" height="46" alt="Image">
+									</a>
+								</li>
+							</ul>
+							<ul class="contacts-footer__links">
+								<li class="contacts-footer__links-item">
+									<a href="tel:+380988234343" class="contacts-footer__phone t-11">+38 098 823 43 43</a>
+								</li>
+								<li class="contacts-footer__links-item">
+									<a href="mailto:brand@posh.pro" class="contacts-footer__email t-15">brand@posh.pro</a>
+								</li>
+							</ul>
+						</address>
+					</div>
+					<div class="footer__btns">
+						<a href="#" data-fls-btn="" data-fls-popup-link="popup--form" class="footer__btn--1 btn btn--4" aria-label="link">
+							<span class="btn-txt">Receive an offer</span>
+							<span class="btn-arr --icon-arrowrightb"></span>
+						</a>
+						<a href="#" data-fls-popup-link="popup--presentation" data-fls-btn="" class="footer__btn--2 btn btn--2 --icon-arrowrightc" aria-label="open">
+							<span class="btn-txt">Download presentation</span>
+						</a>
+						<a href="brief" data-fls-btn="" class="footer__btn--3 btn btn--2 --icon-arrowrightc" aria-label="link">
+							<span class="btn-txt">Complete the checklist</span>
+						</a>
+						<a href="https://posh.pro/en/cases/" target="_blank" class="footer__btn--4 t-5 --icon-arrowrightc" aria-label="link">
+							<span>More cases</span>
+						</a>
+						<a href="https://posh.pro/en/approach/" target="_blank" class="footer__btn--4 t-5 --icon-arrowrightc" aria-label="link">
+							<span>Our approach</span>
+						</a>
+					</div>
+					<div class="footer__avrg">
+						<nav class="footer__nav nav-footer">
+							<ul class="nav-footer__list t-2">
+								<li class="nav-footer__item">
+									<a href="#" data-go-link="gallery" class="nav-footer__link" aria-label="link">Cases</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" data-go-link="cost" class="nav-footer__link" aria-label="link">Timing</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" data-go-link="cost" class="nav-footer__link" aria-label="link">Pricing</a>
+								</li>
+								<li class="nav-footer__item">
+									<a href="#" data-go-link="footer" class="nav-footer__link" aria-label="link">Contacts</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="footer__location t-2">
+							<a href="https://maps.app.goo.gl/R7gd33M41tmP8F176" target="_blank" aria-label="link to a google map">
+								11B Yevhena Sverstiuka Street,
+								<br>
+								"Armaris" Business Center
+Kyiv, Ukraine
+							</a>
+						</div>
+					</div>
+					<div class="footer__bottom bottom-footer">
+						<p class="bottom-footer__copy">
+							Posh fmcg branding ©
+							<span data-fls-setyear="" class="set-year">2026</span>
+						</p>
+						<div class="bottom-footer__links">
+							<a href="#" aria-label="link to privacy policy">Privacy Policy</a>
+							•
+							<a href="#" aria-label="link to Cookie Policy">Cookie Policy</a>
+							•
+							<a href="#" aria-label="link to privacy policy">Cookie Settings</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- <include src="@components/layout/popup/popup.html" locals='{}'></include> -->
+		<div data-lenis-prevent="" data-fls-popup="popup--form" aria-hidden="true" class="popup-form">
+			<div data-fls-popup-wrapper="" class="popup-form__wrapper">
+				<div data-fls-popup-body="" class="popup-form__body">
+					<div class="popup-form__block">
+						<button data-fls-popup-close="" type="button" class="popup-form__close">
+							<img src="./assets/img/icons/cross.svg" width="26" height="26" alt="Image">
+						</button>
+						<div data-fls-popup-content="" class="popup-form__content">
+							<div class="popup-form__title">
+								<p>TEXT US</p>
+							</div>
+							<form class="popup-form__form form-popup" data-fls-form="dev" data-fls-form-popup="popup--msg" action="#" method="POST">
+								<div class="form-popup__items">
+									<div class="form-popup__item t-2">
+										<label for="f1">Your name:</label>
+										<input id="f1" data-fls-input="" data-fls-form-validatenow="" required type="text" name="form[name]" class="input-main">
+									</div>
+									<div class="form-popup__item t-2">
+										<label for="f2">Company name:</label>
+										<input id="f2" data-fls-input="" type="text" name="form[company]" class="input-main">
+									</div>
+									<div class="form-popup__item t-2">
+										<label for="f3">E-mail:</label>
+										<input id="f3" data-fls-input="" data-fls-form-validatenow="" required type="email" name="form[email]" class="input-main">
+									</div>
+									<div class="form-popup__item t-2">
+										<label for="f4">Phone number:</label>
+										<input id="f4" data-fls-input="" type="tel" name="form[tel]" class="input-main">
+									</div>
+								</div>
+								<div class="form-popup__item t-2">
+									<label for="f5">Your message:</label>
+									<textarea id="f5" data-fls-input="" data-fls-input-autoheight="" autocomplete="off" name="form[message]" class="input-main"></textarea>
+								</div>
+								<div class="form-popup__checkbox">
+									<input type="checkbox" id="policy" name="policy" data-fls-form-validatenow="" required>
+									<label for="policy">
+										I have read and accept the
+										<a href="#" target="_blank">privacy policy</a>
+									</label>
+								</div>
+								<div class="form-popup__footer">
+									<button type="submit" class="form-popup__send btn btn--5" aria-label="send">
+										<span class="btn-txt">Send</span>
+										<span class="btn-arr --icon-arrowrightb"></span>
+									</button>
+									<div class="form-popup__item form-file">
+										<div class="form-file__wrap">
+											<input type="file" name="form[file]" accept=".webp,.pdf,.doc,.docx" class="form-file__input">
+											<button type="button" class="form-file__btn">
+												<span class="form-file__text">Attach File</span>
+												<span class="form-file__file-name"></span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--
+<div data-lenis-prevent data-fls-popup="popup--estimate" aria-hidden="true" class="popup-estimate">
+<div data-fls-popup-wrapper class="popup-estimate__wrapper">
+<div data-fls-popup-body class="popup-estimate__body">
+<div class="popup-estimate__block">
+<button data-fls-popup-close type="button" class="popup-estimate__close">
+<img src="@img/icons/cross.svg" width="26" height="26" alt="Image">
+</button>
+<div data-fls-popup-content class="popup-estimate__content">
+<div class="popup-estimate__title">
+<p>Project estimate</p>
+</div>
+<form class="popup-estimate__form form-estimate" data-fls-form="dev" data-fls-form-popup="popup--msg" action="#" method="POST">
+<div class="form-estimate__grid">
+<div class="form-estimate__group">
+<div class="form-estimate__title">What do you need to develop?</div>
+<div class="form-estimate__options">
+<div class="form-estimate__option">
+<input id="dev-1" type="radio" name="estimate[develop]" value="Design concept" required>
+<label for="dev-1">Design concept</label>
+</div>
+<div class="form-estimate__option">
+<input id="dev-2" type="radio" name="estimate[develop]" value="Design for new SKUs">
+<label for="dev-2">Design for new SKUs</label>
+</div>
+<div class="form-estimate__option">
+<input id="dev-3" type="radio" name="estimate[develop]" value="Brand strategy from scratch">
+<label for="dev-3">Brand strategy from scratch</label>
+</div>
+</div>
+</div>
+<div class="form-estimate__group">
+<div class="form-estimate__title">Do you have a technical brief?</div>
+<div class="form-estimate__options">
+<div class="form-estimate__option">
+<input id="brief-1" type="radio" name="estimate[brief]" value="Yes, ready to send" required>
+<label for="brief-1">Yes, ready to send</label>
+</div>
+<div class="form-estimate__option">
+<input id="brief-2" type="radio" name="estimate[brief]" value="No, but ready to prepare one">
+<label for="brief-2">No, but ready to prepare one</label>
+</div>
+<div class="form-estimate__option">
+<input id="brief-3" type="radio" name="estimate[brief]" value="No, it’s hard to prepare">
+<label for="brief-3">No, it’s hard to prepare</label>
+</div>
+</div>
+</div>
+<div class="form-estimate__group">
+<div class="form-estimate__title">How many SKUs are in the range?</div>
+<div class="form-estimate__options row">
+<div class="form-estimate__option">
+<input id="sku-1" type="radio" name="estimate[skus]" value="1-5">
+<label for="sku-1">1-5</label>
+</div>
+<div class="form-estimate__option">
+<input id="sku-2" type="radio" name="estimate[skus]" value="5-10">
+<label for="sku-2">5-10</label>
+</div>
+<div class="form-estimate__option">
+<input id="sku-3" type="radio" name="estimate[skus]" value="10-20">
+<label for="sku-3">10-20</label>
+</div>
+<div class="form-estimate__option">
+<input id="sku-4" type="radio" name="estimate[skus]" value="20+">
+<label for="sku-4">20+</label>
+</div>
+</div>
+</div>
+<div class="form-popup__items form-estimate__fields">
+<div class="form-popup__item form-estimate__field t-2">
+<label for="e-name">Your name:</label>
+<input id="e-name" data-fls-input type="text" name="estimate[name]" class="input-main">
+</div>
+<div class="form-popup__item form-estimate__field t-2">
+<label for="e-company">Company name:</label>
+<input id="e-company" data-fls-input type="text" name="estimate[company]" class="input-main">
+</div>
+<div class="form-popup__item form-estimate__field t-2">
+<label for="e-email">E-mail:</label>
+<input id="e-email" data-fls-input data-fls-form-validatenow required type="email" name="estimate[email]" class="input-main">
+</div>
+<div class="form-popup__item form-estimate__field t-2">
+<label for="e-phone">Phone number:</label>
+<input id="e-phone" data-fls-input type="tel" name="estimate[tel]" class="input-main">
+</div>
+</div>
+<div class="form-estimate__checkbox">
+<div class="form-popup__checkbox">
+<input type="checkbox" id="e-policy" name="policy" data-fls-form-validatenow required>
+<label for="e-policy">I have read and accept the <a href="#" target="_blank">privacy policy</a></label>
+</div>
+</div>
+<div class="form-popup__footer form-estimate__footer">
+<button type="submit" class="form-popup__send form-estimate__send btn btn--5" aria-label="send">
+<span class="btn-txt">Send</span>
+<span class="btn-arr --icon-arrowrightb"></span>
+</button>
+<div class="form-popup__item form-estimate__file form-file">
+<div class="form-file__wrap">
+<input type="file" name="form[file]" accept=".webp,.pdf,.doc,.docx" class="form-file__input">
+<button type="button" class="form-file__btn">
+<span class="form-file__text">Attach File</span>
+<span class="form-file__file-name"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div data-lenis-prevent data-fls-popup="popup--msg" aria-hidden="true" class="popup-form">
+<div data-fls-popup-wrapper class="popup-form__wrapper">
+<div data-fls-popup-body class="popup-form__body">
+<button data-fls-popup-close type="button" class="popup-form__close">
+<img src="@img/icons/cross.svg" width="26" height="26" alt="Image">
+</button>
+<div data-fls-popup-content class="popup-form__content">
+<div class="popup-form__title">
+<p>Thank you!<br> Our manager will contact you shortly.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+-->
+		<!-- <include src="@components/layout/popup/popup-guide.html" locals='{}'></include> -->
+		<div data-lenis-prevent="" data-fls-popup="popup--presentation" aria-hidden="true" class="popup-presentation">
+			<div data-fls-popup-wrapper="" class="popup-presentation__wrapper">
+				<div data-fls-popup-body="" class="popup-presentation__body">
+					<div data-fls-popup-content="" class="popup-presentation__content">
+						<button data-fls-popup-close="" type="button" class="popup-presentation__close">
+							<img src="./assets/img/icons/cross.svg" width="26" height="26" alt="Image">
+						</button>
+						<div class="popup-presentation__title">
+							<p>
+								Download the
+								<br>
+								presentation
+							</p>
+						</div>
+						<div class="popup-presentation__text">
+							<p>
+								<b>Almost done!</b>
+								🫣 Please confirm
+						you're human and we’ll give you instant
+						access to the PDF presentation! 🙏🏻
+							</p>
+						</div>
+						<form class="popup-presentation__form" data-fls-form="dev" action="#" method="POST"></form>
+						<div class="popup-presentation__recaptcha">
+							<picture>
+								<img width="247" height="67" alt="Image" src="./assets/img/popups/reCaptcha.webp">
+							</picture>
+						</div>
+						<button type="submit" class="popup-presentation__send form-estimate__send btn btn--5" aria-label="send">
+							<span class="btn-txt">Download</span>
+							<span class="btn-arr --icon-arrowrightb"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-lenis-prevent="" data-fls-popup="popup--promo" aria-hidden="true" class="popup-promo">
+			<div data-fls-popup-wrapper="" class="popup-promo__wrapper">
+				<div data-fls-popup-body="" class="popup-promo__body">
+					<div data-fls-popup-content="" class="popup-promo__content">
+						<button data-fls-popup-close="" type="button" class="popup-promo__close">
+							<img src="./assets/img/icons/cross.svg" width="26" height="26" alt="Image">
+						</button>
+						<div data-fls-promo="" class="popup-promo__video">
+							<video playsinline="" controls>
+								<source data-src="assets/video/posh-showreel-long-pc.mp4" type="video/mp4" media="(min-width: 30.061em)">
+								<source data-src="assets/video/posh-showreel-long-mb.mp4" type="video/mp4">
+							</video>
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/posters-video/poster-hero-mb.webp" type="image/webp">
+								<img data-img-ignore="" class="popup-promo__poster ibg" width="813" height="494" loading="lazy" alt="Image" src="./assets/img/posters-video/poster-hero-pc.webp">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

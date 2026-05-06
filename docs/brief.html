@@ -1,0 +1,2755 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="./assets/fonts/Mont-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Mont-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Mont-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="./assets/fonts/Mont-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="shortcut icon" href="./assets/img/favicons/favicon.ico">
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/favicon-192x192.png">
+		<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon/favicon-512x512.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/favicon-180x180.png">
+		<meta name="msapplication-TileImage" content="assets/img/favicon/mstile-270x270.png">
+		<meta name="msapplication-TileColor" content="#1A1F35">
+		<title>POSH Packaging Design - Brief</title>
+		<style>
+			[data-fls-ticker]{--ticker-distance:0rem;--ticker-duration:80s;overflow:hidden;width:max-content;display:flex;align-items:center;cursor:pointer}[data-fls-ticker]>*{display:flex;flex-wrap:nowrap;flex:0 0 auto;min-width:max-content;will-change:transform}@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--ticker-distance)))}}@keyframes ticker-scroll-reverse{from{transform:translateX(calc(-1 * var(--ticker-distance)))}to{transform:translateX(0)}}.ticker-header__item{font-weight:600;font-size:.75rem;text-transform:uppercase;color:var(--black)}.ticker-header__item p{padding-right:.625rem;margin-right:.625rem;position:relative}.ticker-header__item p::after{content:"";position:absolute;right:-.1875rem;top:50%;transform:translate(0,-75%);width:.1875rem;height:.1875rem;border-radius:50%;background-color:var(--black)}.swiper{overflow:hidden}.swiper-initialized{touch-action:pan-y}.swiper-wrapper{width:100%;height:100%;box-sizing:content-box;display:flex;position:relative}.swiper-vertical .swiper-wrapper{flex-direction:column}.swiper-autoheight .swiper-wrapper{align-items:flex-start}.swiper-initialized .swiper-slide{flex-shrink:0}.swiper-android .swiper-slide,.swiper-android .swiper-wrapper{transform:translate3d(0,0,0)}.swiper-button-lock{display:none!important}.swiper-3d,.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:75rem}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide,.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-cards .swiper-slide{transform-origin:center bottom;backface-visibility:hidden;overflow:hidden}.swiper.swiper-cards{overflow:visible}.swiper-cards ::slotted(swiper-slide){transform-origin:center bottom;backface-visibility:hidden;overflow:hidden}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}
+		</style>
+		<script type="module" crossorigin="" src="./js/common.min.js?v=1778077557872"></script>
+		<script type="module" crossorigin="" src="./js/popup.min.js?v=1778077557872"></script>
+		<script type="module" crossorigin="" src="./js/brief.min2.js?v=1778077557872"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1778077557872">
+		<link rel="stylesheet" crossorigin="" href="./css/brief.min.css?v=1778077557872">
+	</head>
+	<body>
+		<div class="wrapper">
+			<main class="page page--brief">
+				<section class="brief">
+					<div class="brief__header header-brief">
+						<div class="header-brief__container">
+							<a href="index" class="header-brief__link">
+								<img src="./assets/img/icons/logo-dark.svg" width="180" height="40" alt="Image">
+							</a>
+							<div class="header-brief__progress">
+								<div class="header-brief__progress-line">
+									<span class="header-brief__progress-fill" style="width: 0%;"></span>
+								</div>
+								<div class="header-brief__progress-count">
+									<span data-brief-current="">1</span>
+									/
+									<span data-brief-total="">7</span>
+								</div>
+							</div>
+							<button type="button" data-fls-popup-link="popup--brief" class="header-brief__menu" aria-label="open popup menu">
+								<span class="header-brief__menu-text t-2">Menu</span>
+								<span class="header-brief__menu-icon">
+									<span></span>
+								</span>
+							</button>
+						</div>
+					</div>
+					<div class="brief__container">
+						<form class="brief__form" data-form="brief" data-fls-form="dev" method="POST" action="#">
+							<div class="brief__sections">
+								<div class="brief__section" data-brief-step="">
+									<fieldset>
+										<div class="brief__head mb-30">
+											<h2 class="brief__title title-tippy t-16">
+												What's your challenge?
+												<span data-fls-tooltip="" data-tippy-content="This answer affects the next questions, timeline, and pricing."></span>
+											</h2>
+										</div>
+										<div class="brief-option">
+											<label class="brief-option__item">
+												<input type="radio" name="brief_branch" value="concept" required>
+												<div class="brief-option__box">
+													<div class="brief-option__title t-17">Development of a new design concept</div>
+													<div class="brief-option__text t-2">
+														This includes developing graphic concepts for a brand or packaging from scratch. The more details you share with us upfront, the better we can estimate price and timing
+													</div>
+												</div>
+											</label>
+											<label class="brief-option__item">
+												<input type="radio" name="brief_branch" value="sku">
+												<div class="brief-option__box">
+													<div class="brief-option__title t-17">Development of a new SKU line</div>
+													<div class="brief-option__text t-2">
+														This includes the development of a design layout based on the existing graphic concept of the brand. The more details you share with us upfront, the better we can estimate price and timing
+													</div>
+												</div>
+											</label>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="">
+									<fieldset>
+										<div class="brief__head mb-30">
+											<h2 class="brief__title title-tippy t-16">
+												Contact details
+												<span data-fls-tooltip="" data-tippy-content="We collect your contact details only to quickly respond to your requests. We do not send spam and we do not share your data with third parties."></span>
+											</h2>
+											<div class="brief__subtitle">
+												<p>Fill out your contact information so we can contact you.</p>
+											</div>
+										</div>
+										<div class="brief-field">
+											<label class="brief-field__item">
+												<span class="brief-field__label">Your company/brand name</span>
+												<input autocomplete="off" type="text" name="company_name" placeholder="e.g. BREND Group" class="input-brief">
+											</label>
+											<label class="brief-field__item">
+												<span class="brief-field__label">Your name</span>
+												<input autocomplete="off" type="text" name="client_name" placeholder="" class="input-brief">
+											</label>
+											<label class="brief-field__item">
+												<span class="brief-field__label">Your Email *</span>
+												<div class="brief-field__input-icon --icon-mail">
+													<input autocomplete="off" type="email" name="client_email" placeholder="client@gmail.com" required class="input-brief">
+												</div>
+												<div class="brief-field__desc">
+													<p>
+														<span class="--icon-question"></span>
+														You will get a copy of the checklist, and we will be able to contact you by mail
+													</p>
+												</div>
+											</label>
+											<label class="brief-field__item">
+												<span class="brief-field__label">Your phone</span>
+												<div class="brief-field__input-icon --icon-phone">
+													<input type="tel" inputmode="numeric" name="client_phone" placeholder="" class="input-brief">
+												</div>
+											</label>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="sku">
+									<fieldset>
+										<div class="brief__head mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												Existing concept
+												<span data-fls-tooltip="" data-tippy-content="This helps us understand the style and feel of your current design. We'll carry these features over to the new SKUs."></span>
+											</h2>
+											<div class="brief__subtitle">
+												<p>Upload a photo or visualization of an existing brand concept</p>
+											</div>
+										</div>
+										<div class="brief-upload mb-15" data-brief-upload="">
+											<input class="brief-upload__input" type="file" name="sku_files[a]" multiple accept=".jpg,.jpeg,.png,.webp,.gif,.avif,.svg,.mp4,.mov,.webm,.m4v,.pdf,.docx,.xlsx,.ai,.cdr,.eps">
+											<button type="button" class="brief-upload__btn" aria-label="загрузить файлы" data-upload-btn="">
+												<span class="--icon-file"></span>
+												Upload files
+											</button>
+											<div class="brief-upload__error" data-upload-error="">The files must not exceed 10 MB in total!</div>
+											<div class="brief-upload__list" data-upload-list=""></div>
+										</div>
+										<div class="brief__subtitle --color-dark mt-20 mb-8">
+											<p>Or send us a link:</p>
+										</div>
+										<div class="mt-10 mb-40">
+											<input autocomplete="off" type="url" name="sku_link" placeholder="Paste link..." class="input-brief">
+										</div>
+										<div class="brief__head mb-15">
+											<h2 class="brief__title title-tippy t-16">
+												Description of new SKUs
+												<span data-fls-tooltip="" data-tippy-content="Help us understand the product's key features, benefits and special functions for the packaging design"></span>
+											</h2>
+											<div class="brief__subtitle">
+												<p>Briefly describe the features of the new products</p>
+											</div>
+										</div>
+										<div class="brief-textarea">
+											<label class="brief-textarea__item">
+												<textarea name="sku_description" class="textarea-brief" placeholder="For example: We want to expand our product line of sauces with a new SKU — Shrimp Sauce originally from Vietnam, called Mam Tom. The main feature that it contains natural shrimps . This is a product for exotic lovers and Asian cuisine fans."></textarea>
+											</label>
+										</div>
+										<div class="brief-counter mt-23">
+											<div class="brief-counter__txt">
+												<p>Specify the number of new SKUs</p>
+											</div>
+											<div data-fls-quantity="" class="quantity">
+												<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+												<div class="quantity__input">
+													<input data-fls-quantity-value="" autocomplete="off" type="text" name="sku_count_new[sku]" value="1">
+												</div>
+												<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="sku">
+									<fieldset>
+										<div class="brief__head mb-15">
+											<h2 class="brief__title title-tippy t-16">
+												Select the type of packaging
+												<span data-fls-tooltip="" data-tippy-content="We factor in shape and materials to catch any production issues early and to avoid “surprises” during production"></span>
+											</h2>
+										</div>
+										<div data-brief-filters="">
+											<div class="brief-filters">
+												<div class="brief-filters__name">Filter:</div>
+												<div class="brief-filters__list">
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="all" checked data-default-checked="">
+														<span class="brief-filters__box">All</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="flexible">
+														<span class="brief-filters__box">Flexible</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="cardboard">
+														<span class="brief-filters__box">Cardboard</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="paper">
+														<span class="brief-filters__box">Paper</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="metal">
+														<span class="brief-filters__box">Metal</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="glass">
+														<span class="brief-filters__box">Glass</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="plastic">
+														<span class="brief-filters__box">Plastic</span>
+													</label>
+												</div>
+											</div>
+											<div class="brief-type">
+												<div data-fls-slider="" class="swiper brief-type__slider">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Tetra Pak</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Folding
+																		<br>
+																		carton box
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Window box</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Display box</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Molded pulp</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Corrugated box</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_7">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-7.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Paper tub</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_8">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-8.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Cardboard tube</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_9">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-9.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Paper
+																		<br>
+																		carrier bag
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_cardboard_10">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-10.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Other carton</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Pillow three-seal
+																		<br>
+																		bag
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Side-gusset bag</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Flat bottom pouch</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Doypack</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Flat sachet</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Spouted
+																		<br>
+																		pouch
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_7">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-7.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Lidding film</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_8">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-8.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Vacuum
+																		<br>
+																		pack
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_9">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-9.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Polyamide
+																		<br>
+																		casing
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_10">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-10.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Twist-wrap
+																		<br>
+																		label
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_11">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-11.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Shrink-sleeve
+																		<br>
+																		label
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_flexible_12">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-12.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Flexible
+																		<br>
+																		Other
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="glass">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_glass_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-glass-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Glass perfume
+																		<br>
+																		bottle (vial, flask)
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="glass">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_glass_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-glass-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Glass
+																		<br>
+																		bottle
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="glass">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_glass_7">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-glass-7.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Glass jar</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="metal">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_metal_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-metal-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Aluminum
+																		<br>
+																		can
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="metal">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_metal_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-metal-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Aerosol
+																		<br>
+																		can
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="metal">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_metal_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-metal-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Tin can</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="metal">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_metal_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-metal-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Other
+																		<br>
+																		metal
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_paper_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Paper
+																		<br>
+																		sachet
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_paper_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Paper label</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_paper_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Paper
+																		<br>
+																		wrap
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_paper_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Paper
+																		<br>
+																		wrap
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_paper_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Paper bag</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_paper_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Other
+																		<br>
+																		paper
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_plastic_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		HDPE bottle
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_plastic_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		HDPE bottle
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_plastic_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		tube
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_plastic_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		cup
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_plastic_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		spray bottle
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_plastic_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		PET clamshell
+																		<br>
+																		container
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_plastic_7">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-7.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>PP deli container</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[sku]" value="type_plastic_8">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-8.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Other plastic</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<button type="button" class="swiper-button-prev" aria-label="prev">
+														<svg width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<circle cx="17.5" cy="17.5" r="17.5" fill="#1A1F35"></circle>
+															<path d="M19.1211 12.673L14.2935 17.5005L19.1211 22.3281" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</button>
+													<button type="button" class="swiper-button-next" aria-label="next">
+														<svg width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<circle cx="17.5" cy="17.5" r="17.5" fill="#1A1F35"></circle>
+															<path d="M16.293 22.327L21.1206 17.4995L16.293 12.6719" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="brief__head mt-60 mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												<div>Dieline or packaging layout</div>
+												<span data-fls-tooltip="" data-tippy-content="The cut or drawing of the packaging displays the exact dimensions, fold lines, cuts, adhesive flaps, sealing lines, photo marks, place by date, technical indents, safe zones, etc.d."></span>
+											</h2>
+											<div class="brief__subtitle t-balance">
+												<p>
+													We need a vector file format (.ai, .cdr, .eps, .pdf) of layout, but for now you can upload it in any format
+												</p>
+											</div>
+										</div>
+										<div class="brief-upload mb-8" data-brief-upload="">
+											<input class="brief-upload__input" type="file" name="sku_files[b]" multiple accept=".jpg,.jpeg,.png,.webp,.gif,.avif,.svg,.mp4,.mov,.webm,.m4v,.pdf,.docx,.xlsx,.ai,.cdr,.eps">
+											<button type="button" class="brief-upload__btn" aria-label="загрузить файлы" data-upload-btn="">
+												<span class="--icon-file"></span>
+												Upload file
+											</button>
+											<div class="brief-upload__error" data-upload-error="">The files must not exceed 10 MB in total!</div>
+											<div class="brief-upload__list" data-upload-list=""></div>
+										</div>
+										<div class="brief-field__desc t-balance --color-light-gray">
+											<p>
+												<span class="--icon-question"></span>
+												.ai, .cdr, .eps, .pdf vector images and .zip, .rar archives or any other format
+											</p>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="sku">
+									<fieldset>
+										<div class="brief__head mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												Front side information
+												<span data-fls-tooltip="" data-tippy-content="The front side of the package contains both marketing elements that drive sales and legally required information"></span>
+											</h2>
+											<div class="brief__subtitle">
+												<p>Describe what we should place on the front of the package</p>
+											</div>
+										</div>
+										<div class="brief-textarea mb-20">
+											<label class="brief-textarea__item">
+												<textarea name="sku_front" class="textarea-brief" placeholder="For example: we want a juicy food zone on the front, plus be sure to place the product weight"></textarea>
+											</label>
+										</div>
+										<div class="brief-counter">
+											<div class="brief-counter__txt">
+												<p>
+													The number of
+													<br>
+													languages ​​on the package
+												</p>
+											</div>
+											<div data-fls-quantity="" class="quantity">
+												<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+												<div class="quantity__input">
+													<input data-fls-quantity-value="" autocomplete="off" type="text" name="sku_languages[sku]" value="1">
+												</div>
+												<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+											</div>
+										</div>
+										<div class="brief__head mt-40 mb-20">
+											<h2 class="brief__title t-16">Technical texts</h2>
+											<div class="brief__subtitle t-balance">
+												<p>
+													Attach a file with complete technical information that needs to be placed on the package. You can easily
+													<a href="files/Posh_FMCG_Design_presentation_eng.pdf" target="_blank" class="brief-download__link" aria-label="download">download our template</a>
+													—
+                    we made it to avoid mistakes and to speed up the process
+												</p>
+											</div>
+										</div>
+										<div class="brief-upload mb-8" data-brief-upload="">
+											<input class="brief-upload__input" type="file" name="sku_files[c]" multiple accept=".jpg,.jpeg,.png,.webp,.gif,.avif,.svg,.mp4,.mov,.webm,.m4v,.pdf,.docx,.xlsx,.ai,.cdr,.eps">
+											<button type="button" class="brief-upload__btn" aria-label="загрузить файлы" data-upload-btn="">
+												<span class="--icon-file"></span>
+												Upload file
+											</button>
+											<div class="brief-upload__error" data-upload-error="">The files must not exceed 10 MB in total!</div>
+											<div class="brief-upload__list" data-upload-list=""></div>
+										</div>
+										<div class="brief-field__desc t-balance --color-primary">
+											<p>
+												<span class="--icon-question"></span>
+												You can send this file to the manager later, but
+												<b>this file is required.</b>
+											</p>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="sku">
+									<fieldset>
+										<div class="brief__head mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												Number of colors
+												<span data-fls-tooltip="" data-tippy-content="Most layouts use 4–6 colours. More colors is possible, but it increases the printing cost and requires coordination with the printing house. Also, we can always reduce the colour count to a minimum."></span>
+											</h2>
+										</div>
+										<div class="brief-counter mb-20">
+											<div class="brief-counter__txt">
+												<p>
+													Select the allowed
+													<br>
+													number of print colours
+												</p>
+											</div>
+											<div data-fls-quantity="" class="quantity">
+												<button data-fls-quantity-minus="" type="button" class="quantity__button quantity__button--minus"></button>
+												<div class="quantity__input">
+													<input data-fls-quantity-value="" autocomplete="off" type="text" name="sku_form[]" value="1">
+												</div>
+												<button data-fls-quantity-plus="" type="button" class="quantity__button quantity__button--plus"></button>
+											</div>
+										</div>
+										<div class="brief-print__colors">
+											<label class="brief-check">
+												<input type="checkbox" name="sku_colors_type" value="cmyk" checked data-default-checked="">
+												<span class="brief-check__box --icon-check"></span>
+												CMYK
+											</label>
+											<label class="brief-check">
+												<input type="checkbox" name="sku_colors_type" value="pantone">
+												<span class="brief-check__box --icon-check"></span>
+												Pantone
+											</label>
+										</div>
+										<div class="brief__head mt-40 mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												<div>
+													Printing effects
+													<span class="final-label --icon-goblet">Final question</span>
+												</div>
+												<span data-fls-tooltip="" data-tippy-content="The choice depends on the type of the packaging, project budget, printing technology and product aim: to attract attention, emphasize the premium quality or enhance recognition."></span>
+											</h2>
+											<div class="brief__subtitle t-balance">
+												<p>Select any finishing effects you'd like on the packaging</p>
+											</div>
+										</div>
+										<div class="brief-tags brief-tags--effects">
+											<label class="brief-tags__item">
+												<input type="checkbox" name="sku_print_effects[]" value="matte_surface">
+												<span class="brief-tags__box">Matte surface</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="sku_print_effects[]" value="soft_touch">
+												<span class="brief-tags__box">Soft-touch surface</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="sku_print_effects[]" value="glossy">
+												<span class="brief-tags__box">Glossy elements</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="sku_print_effects[]" value="metalized">
+												<span class="brief-tags__box">Metallized elements</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="sku_print_effects[]" value="foil">
+												<span class="brief-tags__box">Foil stamping</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="sku_print_effects[]" value="embossing">
+												<span class="brief-tags__box">Embossing / Congreve</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="sku_print_effects[]" value="3d_lacquer">
+												<span class="brief-tags__box">3D varnish</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="sku_print_effects[]" value="other">
+												<span class="brief-tags__box">Other</span>
+											</label>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="concept">
+									<fieldset>
+										<div class="brief__head mb-15">
+											<h2 class="brief__title title-tippy t-16">
+												What is the core motivation behind this project?
+												<span data-fls-tooltip="" data-tippy-content="Describe what led to this project — market changes, a design refresh, product line expansion, etc."></span>
+											</h2>
+										</div>
+										<div class="brief-textarea">
+											<label class="brief-textarea__item">
+												<textarea name="concept_project_background" class="textarea-brief" placeholder="For example: Our brand feels outdated and conservative. The brand and product require a refresh and a more relevant offer to the modern market."></textarea>
+											</label>
+										</div>
+										<div class="brief__head mt-40 mb-15">
+											<h2 class="brief__title title-tippy t-16">
+												Features of your product
+												<span data-fls-tooltip="" data-tippy-content="Tell us about your product, describe its type, shape, features and other characteristics."></span>
+											</h2>
+										</div>
+										<div class="brief-textarea">
+											<label class="brief-textarea__item">
+												<textarea name="concept_product_features" class="textarea-brief" placeholder="For example: Cookies with various cream fillings (banana, caramel, coconut, etc.) coated with chocolate glaze. Round cookies, approximately 6 cm in diameter."></textarea>
+											</label>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="concept">
+									<fieldset>
+										<div class="brief__head mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												What brand components already exist?
+												<span data-fls-tooltip="" data-tippy-content="Any existing materials help us to dive into the context and understand your product faster"></span>
+											</h2>
+										</div>
+										<div class="brief-tags brief-tags--brand">
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_existing[]" value="name">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-letters"></span>
+													Name
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_existing[]" value="site">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-click"></span>
+													Website
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_existing[]" value="brandbook">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-mark"></span>
+													Brandbook
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_existing[]" value="catalog">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-book"></span>
+													Catalog
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_existing[]" value="packaging">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-box"></span>
+													Package
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_existing[]" value="posm">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-paint"></span>
+													POS materials
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_existing[]" value="none">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-notfile"></span>
+													None yet
+												</span>
+											</label>
+										</div>
+										<div class="brief__head mt-40 mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												How do you feel about the brand?
+												<span data-fls-tooltip="" data-tippy-content="What do you want people to feel about your brand? This will help us set the right tone and visual direction in the design."></span>
+											</h2>
+										</div>
+										<div class="brief-tags brief-tags--emotions">
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="clean">
+												<span class="brief-tags__box">Clean</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="safe">
+												<span class="brief-tags__box">Safe</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="free">
+												<span class="brief-tags__box">Free</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="progressive">
+												<span class="brief-tags__box">Progressive</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="smart">
+												<span class="brief-tags__box">Smart</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="strong">
+												<span class="brief-tags__box">Strong</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="professional">
+												<span class="brief-tags__box">Professional</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="durable">
+												<span class="brief-tags__box">Durable</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="rebellious">
+												<span class="brief-tags__box">Rebellious</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="soft">
+												<span class="brief-tags__box">Soft</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="provocative">
+												<span class="brief-tags__box">Provocative</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="spectacular">
+												<span class="brief-tags__box">Spectacular</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="revolutionary">
+												<span class="brief-tags__box">Revolutionary</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="creative">
+												<span class="brief-tags__box">Creative</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="unique">
+												<span class="brief-tags__box">Unique</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="prestigious">
+												<span class="brief-tags__box">Prestigious</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="organized">
+												<span class="brief-tags__box">Organized</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="caring">
+												<span class="brief-tags__box">Caring</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="simple">
+												<span class="brief-tags__box">Simple</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="homemade">
+												<span class="brief-tags__box">Homemade</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="funny">
+												<span class="brief-tags__box">Funny</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="playful">
+												<span class="brief-tags__box">Playful</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="sensual">
+												<span class="brief-tags__box">Sensual</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_brand_emotions[]" value="romantic">
+												<span class="brief-tags__box">Romantic</span>
+											</label>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="concept">
+									<fieldset>
+										<div class="brief__head mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												What sales channels are planned?
+												<span data-fls-tooltip="" data-tippy-content="It is important for us to understand and imagine where your product will be sold and who it competes with."></span>
+											</h2>
+										</div>
+										<div class="brief-tags brief-tags--channels">
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_sales_channels[]" value="retail">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-cart"></span>
+													Modern trade
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_sales_channels[]" value="traditional">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-bags"></span>
+													Traditional trade
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_sales_channels[]" value="market">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-eat"></span>
+													Street market
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_sales_channels[]" value="horeca">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-bell"></span>
+													HoReCa
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_sales_channels[]" value="special">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-gear"></span>
+													Specialty stores
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_sales_channels[]" value="instagram">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-social"></span>
+													Instagram
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_sales_channels[]" value="gas_station">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-gasstation"></span>
+													Gas station
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_sales_channels[]" value="vending">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-calculator"></span>
+													Vending machines
+												</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_sales_channels[]" value="own_network">
+												<span class="brief-tags__box">
+													<span class="brief-tags__icon --icon-awardbadge"></span>
+													Own retail chain
+												</span>
+											</label>
+										</div>
+										<div class="brief__head mt-40 mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												Describe your customer behaviour
+												<span data-fls-tooltip="" data-tippy-content="Describe your target customer: income level, what they look for in this category, and why they'd choose your product."></span>
+											</h2>
+										</div>
+										<div class="brief-textarea">
+											<label class="brief-textarea__item">
+												<textarea name="concept_customer_behavior" class="textarea-brief" placeholder="Our customers are more often female, with an average level of income, they are not looking for something cheaper, but they pay attention to the red price tags or sales. They need confidence in the product effectiveness. They are willing to overpay if they see value in the product."></textarea>
+											</label>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="concept">
+									<fieldset>
+										<div class="brief__head mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												First-glance emotions from the packaging
+												<span data-fls-tooltip="" data-tippy-content="Tone of voice of your product or brand. What should people feel when they first see the packaging?"></span>
+											</h2>
+										</div>
+										<div class="brief-tags brief-tags--package">
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="dynamic">
+												<span class="brief-tags__box">Dynamics</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="energy">
+												<span class="brief-tags__box">Energy</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="kindness">
+												<span class="brief-tags__box">Kindness</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="care">
+												<span class="brief-tags__box">Care</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="joy">
+												<span class="brief-tags__box">Joy</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="expert">
+												<span class="brief-tags__box">Expertise</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="surprise">
+												<span class="brief-tags__box">Astonishment</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="calm">
+												<span class="brief-tags__box">Calmness</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="status">
+												<span class="brief-tags__box">Prestige</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="premium">
+												<span class="brief-tags__box">Premium</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="nostalgia">
+												<span class="brief-tags__box">Nostalgia</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="playful">
+												<span class="brief-tags__box">Playfulness</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="appetite">
+												<span class="brief-tags__box">Appetite</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="charming">
+												<span class="brief-tags__box">Fascination</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="confidence">
+												<span class="brief-tags__box">Confidence</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="innovation">
+												<span class="brief-tags__box">Innovation</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="autent">
+												<span class="brief-tags__box">Authenticity</span>
+											</label>
+											<label class="brief-tags__item">
+												<input type="checkbox" name="concept_pack_emotions[]" value="natural">
+												<span class="brief-tags__box">Naturalness</span>
+											</label>
+										</div>
+										<div class="brief__head mt-40 mb-30">
+											<h2 class="brief__title title-tippy t-16">
+												Style references
+												<span data-fls-tooltip="" data-tippy-content="Visual examples that help us understand what mood, style, tone or graphic you want to see in the future design."></span>
+											</h2>
+											<div class="brief__subtitle">
+												<p>Pick examples that you think match the selected emotions.</p>
+											</div>
+										</div>
+										<div class="brief-refs">
+											<div data-fls-slider="" class="swiper brief-refs__slider">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref1">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(1).webp" alt="Reference 1">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref2">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(2).webp" alt="Reference 2">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref3">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(3).webp" alt="Reference 3">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref4">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(4).webp" alt="Reference 4">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref5">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(5).webp" alt="Reference 5">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref6">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(6).webp" alt="Reference 6">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref7">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(7).webp" alt="Reference 7">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref8">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(8).webp" alt="Reference 8">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref9">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(9).webp" alt="Reference 9">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref10">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(10).webp" alt="Reference 10">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref11">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(11).webp" alt="Reference 11">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref12">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(12).webp" alt="Reference 12">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref13">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(13).webp" alt="Reference 13">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref14">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(14).webp" alt="Reference 14">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref15">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(15).webp" alt="Reference 15">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref16">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(16).webp" alt="Reference 16">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref17">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(17).webp" alt="Reference 17">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref18">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(18).webp" alt="Reference 18">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref19">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(19).webp" alt="Reference 19">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref20">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(20).webp" alt="Reference 20">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref21">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(21).webp" alt="Reference 21">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref22">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(22).webp" alt="Reference 22">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref23">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(23).webp" alt="Reference 23">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref24">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(24).webp" alt="Reference 24">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref25">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(25).webp" alt="Reference 25">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref26">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(26).webp" alt="Reference 26">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref27">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(27).webp" alt="Reference 27">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref28">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(28).webp" alt="Reference 28">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref29">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(29).webp" alt="Reference 29">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref30">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(30).webp" alt="Reference 30">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref31">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(31).webp" alt="Reference 31">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref32">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(32).webp" alt="Reference 32">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref33">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(33).webp" alt="Reference 33">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref34">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(34).webp" alt="Reference 34">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref35">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(35).webp" alt="Reference 35">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+													<div class="swiper-slide">
+														<label class="brief-ref">
+															<input type="checkbox" name="concept_pack_refs[]" value="ref36">
+															<span class="brief-ref__box">
+																<img data-img-ignore="" loading="lazy" src="./assets/img/brief/reference/posh_promo_reference%20(36).webp" alt="Reference 36">
+																<span class="brief-ref__check --icon-check"></span>
+															</span>
+														</label>
+													</div>
+												</div>
+												<button type="button" class="swiper-button-prev" aria-label="prev">
+													<svg width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<circle cx="17.5" cy="17.5" r="17.5" fill="white"></circle>
+														<path d="M19.1211 12.673L14.2935 17.5005L19.1211 22.3281" stroke="#1A1F35" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+												<button type="button" class="swiper-button-next" aria-label="next">
+													<svg width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<circle cx="17.5" cy="17.5" r="17.5" fill="white"></circle>
+														<path d="M16.293 22.327L21.1206 17.4995L16.293 12.6719" stroke="#1A1F35" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<div class="brief__section" style="display: none;" data-brief-step="concept">
+									<fieldset>
+										<div class="brief__head mb-15">
+											<h2 class="brief__title title-tippy t-16">
+												Select packaging type
+												<span data-fls-tooltip="" data-tippy-content="Select one or more formats. This helps us accurately understand your idea and match it to project goals."></span>
+											</h2>
+										</div>
+										<div data-brief-filters="">
+											<div class="brief-filters">
+												<div class="brief-filters__name">Filter:</div>
+												<div class="brief-filters__list">
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="all" checked data-default-checked="">
+														<span class="brief-filters__box">All</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="flexible">
+														<span class="brief-filters__box">Flexible</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="cardboard">
+														<span class="brief-filters__box">Cardboard</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="paper">
+														<span class="brief-filters__box">Paper</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="metal">
+														<span class="brief-filters__box">Metal</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="glass">
+														<span class="brief-filters__box">Glass</span>
+													</label>
+													<label class="brief-filters__item">
+														<input type="checkbox" data-filter="" value="plastic">
+														<span class="brief-filters__box">Plastic</span>
+													</label>
+												</div>
+											</div>
+											<div class="brief-type">
+												<div data-fls-slider="" class="swiper brief-type__slider">
+													<div class="swiper-wrapper">
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Tetra Pak</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Folding
+																		<br>
+																		carton box
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Window box</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Display box</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Molded pulp</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Corrugated box</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_7">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-7.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Paper tub</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_8">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-8.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Cardboard tube</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_9">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-9.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Paper
+																		<br>
+																		carrier bag
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="cardboard">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_cardboard_10">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-cardboard-10.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Other carton</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Pillow three-seal
+																		<br>
+																		bag
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Side-gusset bag</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Flat bottom pouch</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Doypack</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Flat sachet</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Spouted
+																		<br>
+																		pouch
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_7">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-7.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Lidding film</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_8">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-8.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Vacuum
+																		<br>
+																		pack
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_9">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-9.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Polyamide
+																		<br>
+																		casing
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_10">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-10.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Twist-wrap
+																		<br>
+																		label
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_11">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-11.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Shrink-sleeve
+																		<br>
+																		label
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="flexible">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_flexible_12">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-flex-12.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Flexible
+																		<br>
+																		Other
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="glass">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_glass_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-glass-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Glass perfume
+																		<br>
+																		bottle (vial, flask)
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="glass">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_glass_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-glass-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Glass
+																		<br>
+																		bottle
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="glass">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_glass_7">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-glass-7.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Glass jar</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="metal">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_metal_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-metal-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Aluminum
+																		<br>
+																		can
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="metal">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_metal_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-metal-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Aerosol
+																		<br>
+																		can
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="metal">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_metal_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-metal-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Tin can</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="metal">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_metal_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-metal-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Other
+																		<br>
+																		metal
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_paper_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Paper
+																		<br>
+																		sachet
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_paper_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Paper label</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_paper_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Paper
+																		<br>
+																		wrap
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_paper_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Paper
+																		<br>
+																		wrap
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_paper_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Paper bag</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="paper">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_paper_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-paper-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Other
+																		<br>
+																		paper
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_plastic_1">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-1.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		HDPE bottle
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_plastic_2">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-2.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		HDPE bottle
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_plastic_3">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-3.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		tube
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_plastic_4">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-4.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		cup
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_plastic_5">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-5.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		Plastic
+																		<br>
+																		spray bottle
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_plastic_6">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-6.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>
+																		PET clamshell
+																		<br>
+																		container
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_plastic_7">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-7.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>PP deli container</p>
+																</div>
+															</div>
+														</div>
+														<div class="swiper-slide" data-ref-tags="plastic">
+															<div class="brief-ref-type">
+																<label class="brief-ref-type__label">
+																	<input type="checkbox" name="package_type[concept]" value="type_plastic_8">
+																	<img data-img-ignore="" src="./assets/img/brief/type/type-plastic-8.webp" alt="image">
+																	<span class="brief-ref-type__check --icon-check"></span>
+																</label>
+																<div class="brief-ref-type__name">
+																	<p>Other plastic</p>
+																</div>
+															</div>
+														</div>
+													</div>
+													<button type="button" class="swiper-button-prev" aria-label="prev">
+														<svg width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<circle cx="17.5" cy="17.5" r="17.5" fill="#1A1F35"></circle>
+															<path d="M19.1211 12.673L14.2935 17.5005L19.1211 22.3281" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</button>
+													<button type="button" class="swiper-button-next" aria-label="next">
+														<svg width="35" height="35" viewbox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<circle cx="17.5" cy="17.5" r="17.5" fill="#1A1F35"></circle>
+															<path d="M16.293 22.327L21.1206 17.4995L16.293 12.6719" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="brief__head mt-40 mb-20">
+											<h2 class="brief__title title-tippy t-16">
+												<div>
+													Information on the packaging
+													<span class="final-label --icon-goblet">Final question</span>
+												</div>
+												<span data-fls-tooltip="" data-tippy-content="What must appear on the packaging? Please describe it in order of priority. Be sure to include the elements required by law."></span>
+											</h2>
+										</div>
+										<div class="brief-textarea">
+											<label class="brief-textarea__item">
+												<textarea name="package_info" class="textarea-brief" placeholder="For example: weight of the product, flavour characteristics, vitamins, etc."></textarea>
+											</label>
+										</div>
+										<label class="brief-copy mt-30">
+											<input type="checkbox" checked data-default-checked="" name="send_copy" value="1">
+											<span class="brief-copy__box">
+												<span class="brief-copy__icon --icon-check"></span>
+												<span class="brief-copy__txt">
+													Send a copy
+													<span>The brief will be sent automatically to your email.</span>
+												</span>
+											</span>
+										</label>
+									</fieldset>
+								</div>
+							</div>
+							<div class="brief__nav">
+								<button type="button" data-brief-prev="" data-fls-btn="" class="brief__btn-prev" aria-label="prev">
+									<span class="icon --icon-arrowrightb"></span>
+									<span class="txt">Go back</span>
+								</button>
+								<button type="button" data-brief-next="" data-fls-btn="" class="brief__btn-next btn btn--5" aria-label="link">
+									<span class="btn-txt">Next step</span>
+									<span class="btn-arr --icon-arrowrightb"></span>
+								</button>
+								<button type="submit" data-fls-btn="" data-brief-submit="" class="brief__btn-submit btn btn--5" aria-label="link">
+									<span class="btn-txt">Send a brief</span>
+									<span class="btn-arr --icon-arrowrightb"></span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</section>
+				<div data-brief-msg="" aria-hidden="true" class="brief-msg">
+					<div class="brief-msg__wrapper">
+						<div class="brief-msg__body">
+							<div class="brief-msg__img">
+								<img src="./assets/img/brief/girl-yoga.svg" loading="lazy" width="296" height="317" alt="Image">
+							</div>
+							<div class="brief-msg__info">
+								<div class="brief-msg__title">
+									<p>Done!</p>
+								</div>
+								<div class="brief-msg__subtitle">
+									<p>
+										Thanks for your time! We are processing your answers and will contact you shortly.
+									</p>
+									<br>
+									<p>While you wait, check out our portfolio:</p>
+								</div>
+								<a href="https://posh.pro" data-fls-btn="" class="brief-msg__link btn btn--1" aria-label="link">
+									<span class="btn-txt">Go to main site</span>
+								</a>
+								<a href="#" data-brief-start="" class="brief-msg__btn --icon-arrowrightb t-2">
+									<span>Start a new brief</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<div data-lenis-prevent="" data-fls-popup="popup--brief" aria-hidden="true" class="popup">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<div class="popup__head">
+						<a href="index" class="popup__back-link --icon-arrowrightb" aria-label="link to the home page">
+							<span>Turn back</span>
+						</a>
+						<button data-fls-popup-close="" type="button" class="popup__close">
+							<svg width="43" height="43" viewbox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.5" y="0.5" width="42" height="42" rx="21" stroke="white"></rect>
+								<path d="M17.5 17.5L21.5 21.5L17.5 25.5" stroke="white"></path>
+								<path d="M25.5 25.5L21.5 21.5L25.5 17.5" stroke="white"></path>
+							</svg>
+						</button>
+					</div>
+					<div data-fls-popup-content="" class="popup-content">
+						<div class="popup-content__title">
+							<p>
+								<b>Let's discuss</b>
+								<br>
+								your project
+								<br>
+								right now
+							</p>
+						</div>
+						<div class="popup-content__subtitle">
+							<p>We'll quickly have a solution for you!</p>
+						</div>
+						<ul class="popup-content__contacts">
+							<li class="popup-content__contact">
+								<a href="tel:+380988234343" class="popup-content__phone" aria-label="phone number">+38 098 823 43 43</a>
+							</li>
+							<li class="popup-content__contact">
+								<a href="mailto:brand@posh.pro" class="popup-content__mail" aria-label="mail">brand@posh.pro</a>
+							</li>
+						</ul>
+						<div class="popup-content__social">
+							<a href="https://t.me/posh_packaging_solutions" class="popup-content__social-ic" aria-label="telegram">
+								<img src="./assets/img/icons/tg.svg" width="50" height="50" alt="Image">
+							</a>
+							<a href="https://wa.me/380988234343" class="popup-content__social-ic" aria-label="telegram">
+								<img src="./assets/img/icons/wts.svg" width="50" height="50" alt="Image">
+							</a>
+						</div>
+						<div class="popup-content__btns">
+							<a href="#" data-fls-btn="" data-fls-popup-link="popup--form" class="popup-content__btn btn btn--3" aria-label="link">
+								<span class="btn-txt">Receive an offer</span>
+								<span class="btn-arr --icon-arrowrightc"></span>
+							</a>
+							<a href="files/Posh_FMCG_Design_presentation_eng.pdf" target="_blank" data-fls-btn="" class="popup-content__btn btn btn--3" aria-label="download">
+								<span class="btn-txt">Download presentation</span>
+								<span class="btn-arr --icon-arrowrightc"></span>
+							</a>
+							<a href="brief" data-fls-btn="" class="popup-content__btn btn btn--3" aria-label="link">
+								<span class="btn-txt">Complete the checklist</span>
+								<span class="btn-arr --icon-arrowrightc"></span>
+							</a>
+							<div class="popup-content__sm-t">
+								<p>only 7 min of your time</p>
+							</div>
+						</div>
+						<ul class="popup-content__lng lng-popup">
+							<li class="lng-popup__item">
+								<a href="brief-uk" class="lng-popup__link" aria-label="link to language">UKR</a>
+							</li>
+							<li class="lng-popup__item">
+								<a href="brief" class="lng-popup__link" aria-label="link to language">ENG</a>
+							</li>
+							<li class="lng-popup__item">
+								<a href="brief-ru" class="lng-popup__link" aria-label="link to language">RU</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-lenis-prevent="" data-fls-popup="popup--form" aria-hidden="true" class="popup-form">
+			<div data-fls-popup-wrapper="" class="popup-form__wrapper">
+				<div data-fls-popup-body="" class="popup-form__body">
+					<div class="popup-form__block">
+						<button data-fls-popup-close="" type="button" class="popup-form__close">
+							<img src="./assets/img/icons/cross.svg" width="26" height="26" alt="Image">
+						</button>
+						<div data-fls-popup-content="" class="popup-form__content">
+							<div class="popup-form__title">
+								<p>TEXT US</p>
+							</div>
+							<form class="popup-form__form form-popup" data-fls-form="dev" data-fls-form-popup="popup--msg" action="#" method="POST">
+								<div class="form-popup__items">
+									<div class="form-popup__item t-2">
+										<label for="f1">Your name:</label>
+										<input id="f1" data-fls-input="" data-fls-form-validatenow="" required type="text" name="form[name]" class="input-main">
+									</div>
+									<div class="form-popup__item t-2">
+										<label for="f2">Company name:</label>
+										<input id="f2" data-fls-input="" type="text" name="form[company]" class="input-main">
+									</div>
+									<div class="form-popup__item t-2">
+										<label for="f3">E-mail:</label>
+										<input id="f3" data-fls-input="" data-fls-form-validatenow="" required type="email" name="form[email]" class="input-main">
+									</div>
+									<div class="form-popup__item t-2">
+										<label for="f4">Phone number:</label>
+										<input id="f4" data-fls-input="" type="tel" name="form[tel]" class="input-main">
+									</div>
+								</div>
+								<div class="form-popup__item t-2">
+									<label for="f5">Your message:</label>
+									<textarea id="f5" data-fls-input="" data-fls-input-autoheight="" autocomplete="off" name="form[message]" class="input-main"></textarea>
+								</div>
+								<div class="form-popup__checkbox">
+									<input type="checkbox" id="policy" name="policy" data-fls-form-validatenow="" required>
+									<label for="policy">
+										I have read and accept the
+										<a href="#" target="_blank">privacy policy</a>
+									</label>
+								</div>
+								<div class="form-popup__footer">
+									<button type="submit" class="form-popup__send btn btn--5" aria-label="send">
+										<span class="btn-txt">Send</span>
+										<span class="btn-arr --icon-arrowrightb"></span>
+									</button>
+									<div class="form-popup__item form-file">
+										<div class="form-file__wrap">
+											<input type="file" name="form[file]" accept=".webp,.pdf,.doc,.docx" class="form-file__input">
+											<button type="button" class="form-file__btn">
+												<span class="form-file__text">Attach File</span>
+												<span class="form-file__file-name"></span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--
+<div data-lenis-prevent data-fls-popup="popup--estimate" aria-hidden="true" class="popup-estimate">
+<div data-fls-popup-wrapper class="popup-estimate__wrapper">
+<div data-fls-popup-body class="popup-estimate__body">
+<div class="popup-estimate__block">
+<button data-fls-popup-close type="button" class="popup-estimate__close">
+<img src="@img/icons/cross.svg" width="26" height="26" alt="Image">
+</button>
+<div data-fls-popup-content class="popup-estimate__content">
+<div class="popup-estimate__title">
+<p>Project estimate</p>
+</div>
+<form class="popup-estimate__form form-estimate" data-fls-form="dev" data-fls-form-popup="popup--msg" action="#" method="POST">
+<div class="form-estimate__grid">
+<div class="form-estimate__group">
+<div class="form-estimate__title">What do you need to develop?</div>
+<div class="form-estimate__options">
+<div class="form-estimate__option">
+<input id="dev-1" type="radio" name="estimate[develop]" value="Design concept" required>
+<label for="dev-1">Design concept</label>
+</div>
+<div class="form-estimate__option">
+<input id="dev-2" type="radio" name="estimate[develop]" value="Design for new SKUs">
+<label for="dev-2">Design for new SKUs</label>
+</div>
+<div class="form-estimate__option">
+<input id="dev-3" type="radio" name="estimate[develop]" value="Brand strategy from scratch">
+<label for="dev-3">Brand strategy from scratch</label>
+</div>
+</div>
+</div>
+<div class="form-estimate__group">
+<div class="form-estimate__title">Do you have a technical brief?</div>
+<div class="form-estimate__options">
+<div class="form-estimate__option">
+<input id="brief-1" type="radio" name="estimate[brief]" value="Yes, ready to send" required>
+<label for="brief-1">Yes, ready to send</label>
+</div>
+<div class="form-estimate__option">
+<input id="brief-2" type="radio" name="estimate[brief]" value="No, but ready to prepare one">
+<label for="brief-2">No, but ready to prepare one</label>
+</div>
+<div class="form-estimate__option">
+<input id="brief-3" type="radio" name="estimate[brief]" value="No, it’s hard to prepare">
+<label for="brief-3">No, it’s hard to prepare</label>
+</div>
+</div>
+</div>
+<div class="form-estimate__group">
+<div class="form-estimate__title">How many SKUs are in the range?</div>
+<div class="form-estimate__options row">
+<div class="form-estimate__option">
+<input id="sku-1" type="radio" name="estimate[skus]" value="1-5">
+<label for="sku-1">1-5</label>
+</div>
+<div class="form-estimate__option">
+<input id="sku-2" type="radio" name="estimate[skus]" value="5-10">
+<label for="sku-2">5-10</label>
+</div>
+<div class="form-estimate__option">
+<input id="sku-3" type="radio" name="estimate[skus]" value="10-20">
+<label for="sku-3">10-20</label>
+</div>
+<div class="form-estimate__option">
+<input id="sku-4" type="radio" name="estimate[skus]" value="20+">
+<label for="sku-4">20+</label>
+</div>
+</div>
+</div>
+<div class="form-popup__items form-estimate__fields">
+<div class="form-popup__item form-estimate__field t-2">
+<label for="e-name">Your name:</label>
+<input id="e-name" data-fls-input type="text" name="estimate[name]" class="input-main">
+</div>
+<div class="form-popup__item form-estimate__field t-2">
+<label for="e-company">Company name:</label>
+<input id="e-company" data-fls-input type="text" name="estimate[company]" class="input-main">
+</div>
+<div class="form-popup__item form-estimate__field t-2">
+<label for="e-email">E-mail:</label>
+<input id="e-email" data-fls-input data-fls-form-validatenow required type="email" name="estimate[email]" class="input-main">
+</div>
+<div class="form-popup__item form-estimate__field t-2">
+<label for="e-phone">Phone number:</label>
+<input id="e-phone" data-fls-input type="tel" name="estimate[tel]" class="input-main">
+</div>
+</div>
+<div class="form-estimate__checkbox">
+<div class="form-popup__checkbox">
+<input type="checkbox" id="e-policy" name="policy" data-fls-form-validatenow required>
+<label for="e-policy">I have read and accept the <a href="#" target="_blank">privacy policy</a></label>
+</div>
+</div>
+<div class="form-popup__footer form-estimate__footer">
+<button type="submit" class="form-popup__send form-estimate__send btn btn--5" aria-label="send">
+<span class="btn-txt">Send</span>
+<span class="btn-arr --icon-arrowrightb"></span>
+</button>
+<div class="form-popup__item form-estimate__file form-file">
+<div class="form-file__wrap">
+<input type="file" name="form[file]" accept=".webp,.pdf,.doc,.docx" class="form-file__input">
+<button type="button" class="form-file__btn">
+<span class="form-file__text">Attach File</span>
+<span class="form-file__file-name"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div data-lenis-prevent data-fls-popup="popup--msg" aria-hidden="true" class="popup-form">
+<div data-fls-popup-wrapper class="popup-form__wrapper">
+<div data-fls-popup-body class="popup-form__body">
+<button data-fls-popup-close type="button" class="popup-form__close">
+<img src="@img/icons/cross.svg" width="26" height="26" alt="Image">
+</button>
+<div data-fls-popup-content class="popup-form__content">
+<div class="popup-form__title">
+<p>Thank you!<br> Our manager will contact you shortly.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+-->
+	</body>
+</html>
