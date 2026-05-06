@@ -17,12 +17,12 @@
 		<style>
 			[data-fls-ticker]{--ticker-distance:0rem;--ticker-duration:80s;overflow:hidden;width:max-content;display:flex;align-items:center;cursor:pointer}[data-fls-ticker]>*{display:flex;flex-wrap:nowrap;flex:0 0 auto;min-width:max-content;will-change:transform}@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--ticker-distance)))}}@keyframes ticker-scroll-reverse{from{transform:translateX(calc(-1 * var(--ticker-distance)))}to{transform:translateX(0)}}.ticker-header__item{font-weight:600;font-size:.75rem;text-transform:uppercase;color:var(--black)}.ticker-header__item p{padding-right:.625rem;margin-right:.625rem;position:relative}.ticker-header__item p::after{content:"";position:absolute;right:-.1875rem;top:50%;transform:translate(0,-75%);width:.1875rem;height:.1875rem;border-radius:50%;background-color:var(--black)}.swiper{overflow:hidden}.swiper-initialized{touch-action:pan-y}.swiper-wrapper{width:100%;height:100%;box-sizing:content-box;display:flex;position:relative}.swiper-vertical .swiper-wrapper{flex-direction:column}.swiper-autoheight .swiper-wrapper{align-items:flex-start}.swiper-initialized .swiper-slide{flex-shrink:0}.swiper-android .swiper-slide,.swiper-android .swiper-wrapper{transform:translate3d(0,0,0)}.swiper-button-lock{display:none!important}.swiper-3d,.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:75rem}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide,.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-cards .swiper-slide{transform-origin:center bottom;backface-visibility:hidden;overflow:hidden}.swiper.swiper-cards{overflow:visible}.swiper-cards ::slotted(swiper-slide){transform-origin:center bottom;backface-visibility:hidden;overflow:hidden}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}
 		</style>
-		<script type="module" crossorigin="" src="./js/index-uk.min.js?v=1778086790522"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1778086790522">
-		<link rel="modulepreload" crossorigin="" href="./js/popup.min.js?v=1778086790522">
-		<link rel="modulepreload" crossorigin="" href="./js/index.min2.js?v=1778086790522">
-		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1778086790522">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min2.css?v=1778086790522">
+		<script type="module" crossorigin="" src="./js/index-uk.min.js?v=1778088048259"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1778088048259">
+		<link rel="modulepreload" crossorigin="" href="./js/popup.min.js?v=1778088048259">
+		<link rel="modulepreload" crossorigin="" href="./js/index.min2.js?v=1778088048259">
+		<link rel="stylesheet" crossorigin="" href="./css/popup.min.css?v=1778088048259">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min2.css?v=1778088048259">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -154,7 +154,7 @@
 										</p>
 									</div>
 									<div class="hero__btns btns-hero">
-										<a href="#" data-fls-btn="" data-go-link="gallery" class="btns-hero__btn btn btn--2 font-bold --icon-arrowrightb" aria-label="open popup">
+										<a href="#" data-fls-btn="" data-go-link="estimate" class="btns-hero__btn btn btn--2 font-bold --icon-arrowrightb" aria-label="open popup">
 											<span class="btn-txt">Заповніть заявку зараз</span>
 										</a>
 									</div>
@@ -179,146 +179,7 @@
 								</div>
 							</div>
 						</div>
-						<!--
-<div class="hero__portfolio">
-<div class="portfolio">
-<div class="portfolio__list">
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-9-mb.webp" type="image/webp">
-<img data-img-ignore width="337" height="244" alt="Image" src="@img/grid/grid-9.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-17-mb.webp" type="image/webp">
-<img data-img-ignore width="337" height="244" alt="Image" src="@img/grid/grid-17.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-3-mb.webp" type="image/webp">
-<img data-img-ignore width="337" height="244" alt="Image" src="@img/grid/grid-3.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<video data-fls-videoplay muted autoplay loop playsinline preload="auto">
-<source src="@video/portfolio-2-pc.mp4" type="video/mp4" media="(min-width: 30.061em)">
-<source src="@video/portfolio-2-mb.mp4" type="video/mp4">
-</video>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-5-mb.webp" type="image/webp">
-<img data-img-ignore fetchpriority="high" width="337" height="244" alt="Image" src="@img/grid/grid-5.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-6-mb.webp" type="image/webp">
-<img data-img-ignore width="337" height="244" alt="Image" src="@img/grid/grid-6.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-7-mb.webp" type="image/webp">
-<img data-img-ignore fetchpriority="high" width="337" height="244" alt="Image" src="@img/grid/grid-7.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<video data-fls-videoplay muted autoplay loop playsinline preload="auto">
-<source src="@video/portfolio-1-pc.mp4" type="video/mp4" media="(min-width: 30.061em)">
-<source src="@video/portfolio-1-mb.mp4" type="video/mp4">
-</video>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-9-mb.webp" type="image/webp">
-<img data-img-ignore width="337" height="244" alt="Image" src="@img/grid/grid-9.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<video data-fls-videoplay muted autoplay loop playsinline preload="auto">
-<source src="@video/portfolio-3-pc.mp4" type="video/mp4" media="(min-width: 30.061em)">
-<source src="@video/portfolio-3-mb.mp4" type="video/mp4">
-</video>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-11-mb.webp" type="image/webp">
-<img data-img-ignore fetchpriority="high" width="337" height="244" alt="Image" src="@img/grid/grid-11.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-12-mb.webp" type="image/webp">
-<img data-img-ignore width="337" height="244" alt="Image" src="@img/grid/grid-12.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-18-mb.webp" type="image/webp">
-<img data-img-ignore width="337" height="244" alt="Image" src="@img/grid/grid-18.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-19-mb.webp" type="image/webp">
-<img data-img-ignore width="337" height="244" alt="Image" src="@img/grid/grid-19.webp">
-</picture>
-</div>
-<div class="portfolio__item">
-<picture>
-<source media="(max-width: 600px)" srcset="@img/grid/grid-15-mb.webp" type="image/webp">
-<img data-img-ignore width="337" height="244" alt="Image" src="@img/grid/grid-15.webp">
-</picture>
-</div>
-</div>
-</div>
-</div>
--->
-						<!--
-<button type="button" class="video-hero__play" aria-label="play">
-<svg class="playBut" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-<polygon class="triangle" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="39.65 65.38 39.65 34.62 64.32 50 39.65 65.38">
-</polygon>
-<circle class="circle_wh" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="50" cy="50" r="40">
-</circle>
-<circle class="circle" fill="none" stroke="#1A1F35" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="50" cy="50" r="40">
-</circle>
-</svg>
-</button>
--->
-						<!--
-<div class="hero__video video-hero">
-<div class="video-hero__container">
-<div data-video-hero class="video-hero__video">
-<button type="button" class="video-hero__play" aria-label="play">
-<svg class="playBut" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-<polygon class="triangle" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="39.65 65.38 39.65 34.62 64.32 50 39.65 65.38">
-</polygon>
-<circle class="circle_wh" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="50" cy="50" r="40">
-</circle>
-<circle class="circle" fill="none" stroke="#1A1F35" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="50" cy="50" r="40">
-</circle>
-</svg>
-</button>
-<div class="video-hero__preview">
-<video data-fls-videoplay muted loop autoplay playsinline preload="auto">
-<source src="@video/posh-showreel-short-pc.mp4" type="video/mp4" media="(min-width: 30.061em)">
-<source src="@video/posh-showreel-short-mb.mp4" type="video/mp4">
-</video>
-</div>
-<div class="video-hero__main">
-<video muted loop playsinline>
-<source src="@video/posh-showreel-long-pc.mp4" type="video/mp4" media="(min-width: 30.061em)">
-<source src="@video/posh-showreel-long-mb.mp4" type="video/mp4">
-</video>
-</div>
-</div>
-</div>
-</div>
--->
+					
 					</div>
 					<div data-fls-dynamic=".footer-hero,480.98,last" class="footer-hero__play">
 						<p>
@@ -329,7 +190,7 @@
 							промо ролик
 						</p>
 						<button type="button" data-fls-popup-link="popup--promo" class="footer-hero__play-btn" aria-label="open full video">
-							<img src="assets/img/icons/play.svg" width="58" height="58" alt="Image">
+							<img src="./assets/img/icons/play.svg" width="58" height="58" alt="Image">
 						</button>
 					</div>
 					<div data-go-id="gallery" class="hero-gallery">
@@ -397,7 +258,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="estimate-section">
+				<section data-go-id="estimate" class="estimate-section">
 					<div class="estimate-section__container">
 						<form class="estimate-section__form estimate-form" data-fls-form="dev" action="" method="POST">
 							<!-- <form class="estimate-section__form estimate-form" data-fls-form="ajax" data-fls-form-popup="popup--msg" action="/brief/inc/form_handler.php" method="POST" novalidate="true"> -->
@@ -2117,7 +1978,6 @@
 				</div>
 			</footer>
 		</div>
-		<!-- <include src="@components/layout/popup/popup-uk.html" locals='{}'></include> -->
 		<div data-lenis-prevent="" data-fls-popup="popup--form" aria-hidden="true" class="popup-form">
 			<div data-fls-popup-wrapper="" class="popup-form__wrapper">
 				<div data-fls-popup-body="" class="popup-form__body">
@@ -2180,137 +2040,6 @@
 				</div>
 			</div>
 		</div>
-		<!--
-<div data-lenis-prevent data-fls-popup="popup--estimate" aria-hidden="true" class="popup-estimate">
-<div data-fls-popup-wrapper class="popup-estimate__wrapper">
-<div data-fls-popup-body class="popup-estimate__body">
-<div class="popup-estimate__block">
-<button data-fls-popup-close type="button" class="popup-estimate__close">
-<img src="@img/icons/cross.svg" width="26" height="26" alt="Image">
-</button>
-<div data-fls-popup-content class="popup-estimate__content">
-<div class="popup-estimate__title">
-<p>Прорахунок проєкту</p>
-</div>
-<form class="popup-estimate__form form-estimate" data-fls-form="dev" data-fls-form-popup="popup--msg" action="#" method="POST">
-<div class="form-estimate__grid">
-<div class="form-estimate__group">
-<div class="form-estimate__title">Що потрібно розробити?</div>
-<div class="form-estimate__options">
-<div class="form-estimate__option">
-<input id="dev-1" type="radio" name="estimate[develop]" value="Design concept" required>
-<label for="dev-1">Концепцію дизайну</label>
-</div>
-<div class="form-estimate__option">
-<input id="dev-2" type="radio" name="estimate[develop]" value="Design for new SKUs">
-<label for="dev-2">Дизайн для нових SKU</label>
-</div>
-<div class="form-estimate__option">
-<input id="dev-3" type="radio" name="estimate[develop]" value="Brand strategy from scratch">
-<label for="dev-3">Стратегію бренду з нуля</label>
-</div>
-</div>
-</div>
-<div class="form-estimate__group">
-<div class="form-estimate__title">Ви маєте технічне завдання?</div>
-<div class="form-estimate__options">
-<div class="form-estimate__option">
-<input id="brief-1" type="radio" name="estimate[brief]" value="Yes, ready to send" required>
-<label for="brief-1">Так, готовий надіслати</label>
-</div>
-<div class="form-estimate__option">
-<input id="brief-2" type="radio" name="estimate[brief]" value="No, but ready to prepare one">
-<label for="brief-2">Ні, але готовий скласти</label>
-</div>
-<div class="form-estimate__option">
-<input id="brief-3" type="radio" name="estimate[brief]" value="No, it’s hard to prepare">
-<label for="brief-3">Ні, складно скласти</label>
-</div>
-</div>
-</div>
-<div class="form-estimate__group">
-<div class="form-estimate__title">Яка кількість SKU в асортименті?</div>
-<div class="form-estimate__options row">
-<div class="form-estimate__option">
-<input id="sku-1" type="radio" name="estimate[skus]" value="1-5">
-<label for="sku-1">1-5</label>
-</div>
-<div class="form-estimate__option">
-<input id="sku-2" type="radio" name="estimate[skus]" value="5-10">
-<label for="sku-2">5-10</label>
-</div>
-<div class="form-estimate__option">
-<input id="sku-3" type="radio" name="estimate[skus]" value="10-20">
-<label for="sku-3">10-20</label>
-</div>
-<div class="form-estimate__option">
-<input id="sku-4" type="radio" name="estimate[skus]" value="20+">
-<label for="sku-4">20+</label>
-</div>
-</div>
-</div>
-<div class="form-popup__items form-estimate__fields">
-<div class="form-popup__item form-estimate__field t-2">
-<label for="e-name">Ваше ім‘я:</label>
-<input id="e-name" data-fls-input type="text" name="estimate[name]" class="input-main">
-</div>
-<div class="form-popup__item form-estimate__field t-2">
-<label for="e-company">Назва компанії:</label>
-<input id="e-company" data-fls-input type="text" name="estimate[company]" class="input-main">
-</div>
-<div class="form-popup__item form-estimate__field t-2">
-<label for="e-email">E-mail:</label>
-<input id="e-email" data-fls-input data-fls-form-validatenow required type="email" name="estimate[email]" class="input-main">
-</div>
-<div class="form-popup__item form-estimate__field t-2">
-<label for="e-phone">Телефон:</label>
-<input id="e-phone" data-fls-input type="tel" name="estimate[tel]" class="input-main">
-</div>
-</div>
-<div class="form-estimate__checkbox">
-<div class="form-popup__checkbox">
-<input type="checkbox" id="e-policy" name="policy" data-fls-form-validatenow required>
-<label for="e-policy">I have read and accept the <a href="#" target="_blank">privacy policy</a></label>
-</div>
-</div>
-<div class="form-popup__footer form-estimate__footer">
-<button type="submit" class="form-popup__send form-estimate__send btn btn--5" aria-label="send">
-<span class="btn-txt">Надіслати</span>
-<span class="btn-arr --icon-arrowrightb"></span>
-</button>
-<div class="form-popup__item form-estimate__file form-file">
-<div class="form-file__wrap">
-<input type="file" name="form[file]" accept=".webp,.pdf,.doc,.docx" class="form-file__input">
-<button type="button" class="form-file__btn">
-<span class="form-file__text">Завантажити файл</span>
-<span class="form-file__file-name"></span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div data-lenis-prevent data-fls-popup="popup--msg" aria-hidden="true" class="popup-form">
-<div data-fls-popup-wrapper class="popup-form__wrapper">
-<div data-fls-popup-body class="popup-form__body">
-<button data-fls-popup-close type="button" class="popup-form__close">
-<img src="@img/icons/cross.svg" width="26" height="26" alt="Image">
-</button>
-<div data-fls-popup-content class="popup-form__content">
-<div class="popup-form__title">
-<p>Дякуюємо!<br> Наш менеджер скоро зв'яжеться з вами.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
--->
-		<!-- <include src="@components/layout/popup/popup-guide-uk.html" locals='{}'></include> -->
 		<div data-lenis-prevent="" data-fls-popup="popup--presentation" aria-hidden="true" class="popup-presentation">
 			<div data-fls-popup-wrapper="" class="popup-presentation__wrapper">
 				<div data-fls-popup-body="" class="popup-presentation__body">

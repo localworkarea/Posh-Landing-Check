@@ -1,4 +1,4 @@
-import { d as dataMediaQueries, s as slideToggle, c as slideUp, g as getDigFormat, u as uniqArray, e as addTouchAttr } from "./common.min.js";
+import { d as dataMediaQueries, s as slideToggle, c as slideUp, g as getDigFormat, u as uniqArray, e as addTouchAttr, b as bodyLockStatus, f as bodyUnlock } from "./common.min.js";
 function spollers() {
   if (window.__flsSpollersInitialized) return;
   window.__flsSpollersInitialized = true;
@@ -1983,6 +1983,12 @@ document.addEventListener("click", (e) => {
   const targetId = link.dataset.goLink;
   const target = document.querySelector(`[data-go-id="${targetId}"]`);
   if (!target) return;
+  if (document.documentElement.hasAttribute("data-fls-menu-open")) {
+    document.documentElement.removeAttribute("data-fls-menu-open");
+    if (bodyLockStatus && typeof bodyUnlock === "function") {
+      bodyUnlock();
+    }
+  }
   scrollToTarget(target, { updateHash: true });
 });
 window.addEventListener("load", () => {
