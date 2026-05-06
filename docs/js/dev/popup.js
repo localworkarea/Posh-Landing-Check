@@ -4989,8 +4989,8 @@ function initSliders() {
       if (costGuaranteeSlider) return;
       costGuaranteeSlider = new Swiper(".cost-guarantee__slider", {
         modules: [Navigation, Autoplay],
-        observer: true,
-        observeParents: true,
+        // observer: true,
+        // observeParents: true,
         slidesPerView: 1,
         spaceBetween: 12,
         speed: 500,
@@ -5041,8 +5041,8 @@ function initSliders() {
   if (document.querySelector(".reviews__slider")) {
     new Swiper(".reviews__slider", {
       // modules: [],
-      observer: true,
-      observeParents: true,
+      // observer: true,
+      // observeParents: true,
       spaceBetween: 0,
       //autoHeight: true,
       speed: 500,
@@ -5151,7 +5151,7 @@ function initSliders() {
       on: {
         init(swiper) {
           updateHeroGalleryImages(swiper);
-          const progressLine = swiper.el.querySelector(".slider-progressspan");
+          const progressLine = swiper.el.querySelector(".slider-progress span");
           if (progressLine) {
             progressLine.style.width = "0%";
           }
@@ -5180,8 +5180,8 @@ function initSliders() {
   if (document.querySelector(".solutions__slider")) {
     new Swiper(".solutions__slider", {
       modules: [Navigation, Autoplay],
-      observer: true,
-      observeParents: true,
+      // observer: true,
+      // observeParents: true,
       speed: 800,
       slidesPerView: 1,
       spaceBetween: 16,
