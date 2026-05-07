@@ -2748,6 +2748,7 @@ body {
     position: relative;
     justify-content: space-between;
     flex-direction: row;
+    min-height: 3.625rem;
   }
   .footer-hero__dwn {
     align-self: flex-end;
