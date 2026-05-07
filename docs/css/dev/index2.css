@@ -723,6 +723,9 @@ body {
 .hero-gallery__slider.swiper {
   overflow: visible;
 }
+.hero-gallery__wrapper {
+  position: relative;
+}
 .hero-gallery__slide {
   will-change: opacity, transform;
   user-select: none;
@@ -731,6 +734,7 @@ body {
   overflow: hidden;
   width: 100%;
   height: 100%;
+  transition: opacity 0.2s ease 0s;
 }
 .hero-gallery__image picture {
   display: block;

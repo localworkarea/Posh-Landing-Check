@@ -37,85 +37,6 @@ function initSliders() {
       slide.style.transitionDuration = `${duration}ms`;
     });
   }
-  if (document.querySelector(".cost-guarantee__slider")) {
-    let enableSlider = function() {
-      if (costGuaranteeSlider) return;
-      costGuaranteeSlider = new Swiper(".cost-guarantee__slider", {
-        modules: [Navigation, Autoplay],
-        // observer: true,
-        // observeParents: true,
-        slidesPerView: 1,
-        spaceBetween: 12,
-        speed: 500,
-        autoplay: {
-          delay: 3e3,
-          disableOnInteraction: true,
-          pauseOnMouseEnter: false
-        },
-        navigation: {
-          prevEl: ".cost-guarantee__slider .swiper-button-prev",
-          nextEl: ".cost-guarantee__slider .swiper-button-next",
-          addIcons: false
-        },
-        on: {
-          init(swiper) {
-            resetSliderAutoplayProgress(swiper);
-          },
-          autoplayTimeLeft(swiper, timeLeft, progress) {
-            updateSliderAutoplayProgress(swiper, progress);
-          },
-          slideChangeTransitionStart(swiper) {
-            resetSliderAutoplayProgress(swiper);
-          }
-        }
-      });
-    }, disableSlider = function() {
-      if (!costGuaranteeSlider) return;
-      costGuaranteeSlider.destroy(true, true);
-      costGuaranteeSlider = null;
-    }, checkSlider = function() {
-      if (mediaQuery.matches) {
-        enableSlider();
-      } else {
-        disableSlider();
-      }
-    };
-    let costGuaranteeSlider = null;
-    const mediaQuery = window.matchMedia("(max-width: 30.061em)");
-    checkSlider();
-    mediaQuery.addEventListener("change", checkSlider);
-  }
-  if (document.querySelector(".reviews__slider")) {
-    new Swiper(".reviews__slider", {
-      // modules: [],
-      // observer: true,
-      // observeParents: true,
-      spaceBetween: 0,
-      //autoHeight: true,
-      speed: 500,
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
-      breakpoints: {
-        320: {
-          slidesPerView: 1.1,
-          spaceBetween: 12
-        },
-        768: {
-          slidesPerView: 1.2,
-          spaceBetween: 20
-        },
-        1024: {
-          slidesPerView: 1.52,
-          spaceBetween: 45
-        }
-      },
-      // Події
-      on: {}
-    });
-  }
   if (document.querySelector(".hero-gallery__slider")) {
     let setHeroGalleryLoadingState = function(state) {
       sliderEl.classList.toggle("--loading", state);
@@ -156,13 +77,13 @@ function initSliders() {
       if (!desktopUrl) return null;
       const mobileUrl = getMobileImageUrl(post, desktopUrl);
       const altText = post?.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, "").trim() : "Case image";
-      const link = post?.link || "#";
+      post?.link || "#";
       const slide = document.createElement("div");
       slide.className = "hero-gallery__slide swiper-slide";
       slide.setAttribute("data-post-id", postId);
       slide.setAttribute("data-case-key", caseKey);
       slide.innerHTML = `
-				<a href="${escapeHtml(link)}" class="hero-gallery__image" aria-label="${escapeHtml(altText)}">
+				<div class="hero-gallery__image">
 					<picture>
 						${mobileUrl ? `<source media="(max-width: 600px)" srcset="${escapeHtml(mobileUrl)}">` : ""}
 						<img
@@ -171,7 +92,7 @@ function initSliders() {
 							src="${escapeHtml(desktopUrl)}"
 						>
 					</picture>
-				</a>
+				</div>
 			`;
       return slide;
     }, removePlaceholderSlide = function() {
@@ -220,7 +141,6 @@ function initSliders() {
       heroGallerySwiper.updateProgress();
       heroGallerySwiper.updateSlidesClasses();
       heroGallerySwiper.update();
-      updateHeroGallerySlideVisuals(heroGallerySwiper);
     };
     const HERO_GALLERY_API_URL = "https://posh.pro/wp-json/wp/v2/case";
     const HERO_GALLERY_PER_PAGE = 10;
@@ -306,7 +226,10 @@ function initSliders() {
           isInitialLoaded = true;
         } else {
           const firstNewSlideIndex = prevRealSlidesCount;
-          heroGallerySwiper.slideTo(firstNewSlideIndex, 700, false);
+          heroGallerySwiper.slideTo(firstNewSlideIndex, 0, false);
+          heroGallerySwiper.updateProgress();
+          heroGallerySwiper.updateSlidesClasses();
+          updateHeroGallerySlideVisuals(heroGallerySwiper);
           if (heroGallerySwiper.params.autoplay) {
             heroGallerySwiper.autoplay.start();
           }
@@ -396,6 +319,85 @@ function initSliders() {
         await loadHeroGalleryPosts({ initial: false });
       });
     }
+  }
+  if (document.querySelector(".cost-guarantee__slider")) {
+    let enableSlider = function() {
+      if (costGuaranteeSlider) return;
+      costGuaranteeSlider = new Swiper(".cost-guarantee__slider", {
+        modules: [Navigation, Autoplay],
+        // observer: true,
+        // observeParents: true,
+        slidesPerView: 1,
+        spaceBetween: 12,
+        speed: 500,
+        autoplay: {
+          delay: 3e3,
+          disableOnInteraction: true,
+          pauseOnMouseEnter: false
+        },
+        navigation: {
+          prevEl: ".cost-guarantee__slider .swiper-button-prev",
+          nextEl: ".cost-guarantee__slider .swiper-button-next",
+          addIcons: false
+        },
+        on: {
+          init(swiper) {
+            resetSliderAutoplayProgress(swiper);
+          },
+          autoplayTimeLeft(swiper, timeLeft, progress) {
+            updateSliderAutoplayProgress(swiper, progress);
+          },
+          slideChangeTransitionStart(swiper) {
+            resetSliderAutoplayProgress(swiper);
+          }
+        }
+      });
+    }, disableSlider = function() {
+      if (!costGuaranteeSlider) return;
+      costGuaranteeSlider.destroy(true, true);
+      costGuaranteeSlider = null;
+    }, checkSlider = function() {
+      if (mediaQuery.matches) {
+        enableSlider();
+      } else {
+        disableSlider();
+      }
+    };
+    let costGuaranteeSlider = null;
+    const mediaQuery = window.matchMedia("(max-width: 30.061em)");
+    checkSlider();
+    mediaQuery.addEventListener("change", checkSlider);
+  }
+  if (document.querySelector(".reviews__slider")) {
+    new Swiper(".reviews__slider", {
+      // modules: [],
+      // observer: true,
+      // observeParents: true,
+      spaceBetween: 0,
+      //autoHeight: true,
+      speed: 500,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.1,
+          spaceBetween: 12
+        },
+        768: {
+          slidesPerView: 1.2,
+          spaceBetween: 20
+        },
+        1024: {
+          slidesPerView: 1.52,
+          spaceBetween: 45
+        }
+      },
+      // Події
+      on: {}
+    });
   }
   if (document.querySelector(".solutions__slider")) {
     new Swiper(".solutions__slider", {
