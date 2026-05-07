@@ -1,5 +1,42 @@
 import { S as Swiper, N as Navigation, A as Autoplay, E as EffectCoverflow, f as freeMode } from "./swiper.min.js";
 function initSliders() {
+  const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+  function updateSliderAutoplayProgress(swiper, progress) {
+    const progressLine = swiper.el.querySelector(".slider-progress span");
+    if (!progressLine) return;
+    const percent = (1 - progress) * 100;
+    progressLine.style.width = `${percent}%`;
+  }
+  function resetSliderAutoplayProgress(swiper) {
+    const progressLine = swiper.el.querySelector(".slider-progress span");
+    if (!progressLine) return;
+    progressLine.style.width = "0%";
+  }
+  function updateHeroGallerySlideVisuals(swiper) {
+    swiper.slides.forEach((slide) => {
+      const img = slide.querySelector(".hero-gallery__image img");
+      if (!img) return;
+      const progress = clamp(slide.progress, -1, 1);
+      const absProgress = Math.abs(progress);
+      const translateX = progress * 30;
+      const scale = 1 + absProgress * 0.6;
+      img.style.transform = `translateX(${translateX}%) scale(${scale})`;
+      const rawProgress = Math.abs(slide.progress);
+      let opacity = 1;
+      if (rawProgress > 1) {
+        opacity = 1 - clamp(rawProgress - 1, 0, 1);
+      }
+      slide.style.opacity = opacity;
+    });
+  }
+  function setHeroGallerySlideTransition(swiper, duration) {
+    swiper.slides.forEach((slide) => {
+      const img = slide.querySelector(".hero-gallery__image img");
+      if (!img) return;
+      img.style.transitionDuration = `${duration}ms`;
+      slide.style.transitionDuration = `${duration}ms`;
+    });
+  }
   if (document.querySelector(".cost-guarantee__slider")) {
     let enableSlider = function() {
       if (costGuaranteeSlider) return;
@@ -22,19 +59,13 @@ function initSliders() {
         },
         on: {
           init(swiper) {
-            const progressLine = swiper.el.querySelector(".slider-progress span");
-            if (progressLine) {
-              progressLine.style.width = "0%";
-            }
+            resetSliderAutoplayProgress(swiper);
           },
           autoplayTimeLeft(swiper, timeLeft, progress) {
-            updateHeroGalleryAutoplayProgress(swiper, progress);
+            updateSliderAutoplayProgress(swiper, progress);
           },
           slideChangeTransitionStart(swiper) {
-            const progressLine = swiper.el.querySelector(".slider-progress span");
-            if (progressLine) {
-              progressLine.style.width = "0%";
-            }
+            resetSliderAutoplayProgress(swiper);
           }
         }
       });
@@ -85,41 +116,211 @@ function initSliders() {
       on: {}
     });
   }
-  const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
-  function updateHeroGalleryImages(swiper) {
-    swiper.slides.forEach((slide) => {
-      const img = slide.querySelector(".hero-gallery__image img");
-      if (!img) return;
-      const progress = clamp(slide.progress, -1, 1);
-      const absProgress = Math.abs(progress);
-      const translateX = progress * 30;
-      const scale = 1 + absProgress * 0.6;
-      img.style.transform = `translateX(${translateX}%) scale(${scale})`;
-      const rawProgress = Math.abs(slide.progress);
-      let opacity = 1;
-      if (rawProgress > 1) {
-        opacity = 1 - clamp(rawProgress - 1, 0, 1);
-      }
-      slide.style.opacity = opacity;
-    });
-  }
-  function setHeroGalleryImagesTransition(swiper, duration) {
-    swiper.slides.forEach((slide) => {
-      const img = slide.querySelector(".hero-gallery__image img");
-      if (!img) return;
-      img.style.transitionDuration = `${duration}ms`;
-      slide.style.transitionDuration = `${duration}ms`;
-    });
-  }
-  function updateHeroGalleryAutoplayProgress(swiper, progress) {
-    const progressLine = swiper.el.querySelector(".slider-progress span");
-    if (!progressLine) return;
-    const percent = (1 - progress) * 100;
-    progressLine.style.width = `${percent}%`;
-  }
   if (document.querySelector(".hero-gallery__slider")) {
-    new Swiper(".hero-gallery__slider", {
+    let setHeroGalleryLoadingState = function(state) {
+      sliderEl.classList.toggle("--loading", state);
+      if (loadMoreBtn) {
+        loadMoreBtn.disabled = state;
+        loadMoreBtn.classList.toggle("--loading", state);
+        loadMoreBtn.setAttribute("aria-busy", state ? "true" : "false");
+      }
+    }, escapeHtml = function(str = "") {
+      return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }, getDesktopImageUrl = function(post) {
+      return post.desktop_image_url || post?.acf?.desktop_image_url || post?.better_featured_image?.source_url || "";
+    }, getMobileImageUrl = function(post, desktopUrl = "") {
+      return post.mobile_image_url || post?.acf?.mobile_image_url || desktopUrl;
+    }, getCaseUniqueKey = function(post) {
+      const link = post?.link || "";
+      if (link) {
+        try {
+          const url = new URL(link);
+          const parts = url.pathname.split("/").filter(Boolean);
+          const caseIndex = parts.indexOf("case");
+          if (caseIndex !== -1 && parts[caseIndex + 1]) {
+            return parts[caseIndex + 1];
+          }
+        } catch (e) {
+        }
+      }
+      const desktopUrl = getDesktopImageUrl(post);
+      if (desktopUrl) {
+        return desktopUrl;
+      }
+      return String(post?.id || "");
+    }, createHeroGallerySlide = function(post) {
+      if (!post?.id) return null;
+      const postId = String(post.id);
+      const caseKey = getCaseUniqueKey(post);
+      const desktopUrl = getDesktopImageUrl(post);
+      if (!desktopUrl) return null;
+      const mobileUrl = getMobileImageUrl(post, desktopUrl);
+      const altText = post?.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, "").trim() : "Case image";
+      const link = post?.link || "#";
+      const slide = document.createElement("div");
+      slide.className = "hero-gallery__slide swiper-slide";
+      slide.setAttribute("data-post-id", postId);
+      slide.setAttribute("data-case-key", caseKey);
+      slide.innerHTML = `
+				<a href="${escapeHtml(link)}" class="hero-gallery__image" aria-label="${escapeHtml(altText)}">
+					<picture>
+						${mobileUrl ? `<source media="(max-width: 600px)" srcset="${escapeHtml(mobileUrl)}">` : ""}
+						<img
+							class="ibg"
+							alt="${escapeHtml(altText)}"
+							src="${escapeHtml(desktopUrl)}"
+						>
+					</picture>
+				</a>
+			`;
+      return slide;
+    }, removePlaceholderSlide = function() {
+      if (placeholderSlide && placeholderSlide.parentNode) {
+        placeholderSlide.remove();
+      }
+    }, hideLoadMoreSlide = function() {
+      if (!moreSlideEl) return;
+      moreSlideEl.hidden = true;
+    }, showLoadMoreSlide = function() {
+      if (!moreSlideEl) return;
+      moreSlideEl.hidden = false;
+    }, updateLoadMoreVisibility = function() {
+      if (currentPage >= totalPages) {
+        hideLoadMoreSlide();
+      } else {
+        showLoadMoreSlide();
+      }
+    }, appendSlidesToHeroGallery = function(posts) {
+      const fragment = document.createDocumentFragment();
+      let addedSlidesCount = 0;
+      posts.forEach((post) => {
+        if (!post?.id) return;
+        const caseKey = String(getCaseUniqueKey(post));
+        if (!caseKey) return;
+        if (loadedCaseKeys.has(caseKey)) return;
+        const existsInDom = wrapperEl.querySelector(
+          `.hero-gallery__slide[data-case-key="${caseKey}"]`
+        );
+        if (existsInDom) {
+          loadedCaseKeys.add(caseKey);
+          return;
+        }
+        const slide = createHeroGallerySlide(post);
+        if (!slide) return;
+        loadedCaseKeys.add(caseKey);
+        fragment.appendChild(slide);
+        addedSlidesCount++;
+      });
+      if (!addedSlidesCount) return 0;
+      wrapperEl.insertBefore(fragment, moreSlideEl);
+      return addedSlidesCount;
+    }, updateSwiperAfterDomChange = function() {
+      heroGallerySwiper.updateSlides();
+      heroGallerySwiper.updateSize();
+      heroGallerySwiper.updateProgress();
+      heroGallerySwiper.updateSlidesClasses();
+      heroGallerySwiper.update();
+      updateHeroGallerySlideVisuals(heroGallerySwiper);
+    };
+    const HERO_GALLERY_API_URL = "https://posh.pro/wp-json/wp/v2/case";
+    const HERO_GALLERY_PER_PAGE = 10;
+    const sliderEl = document.querySelector(".hero-gallery__slider");
+    if (!sliderEl) return;
+    if (sliderEl.dataset.heroGalleryInited === "true") {
+      return;
+    }
+    sliderEl.dataset.heroGalleryInited = "true";
+    const wrapperEl = sliderEl.querySelector("[data-fls-slider-wrapper]") || sliderEl.querySelector(".swiper-wrapper");
+    if (!wrapperEl) {
+      console.error("Hero gallery: wrapper not found");
+      return;
+    }
+    const moreSlideEl = wrapperEl.querySelector("[data-fls-slider-more]");
+    if (!moreSlideEl) {
+      console.error("Hero gallery: [data-fls-slider-more] slide not found");
+      return;
+    }
+    const loadMoreBtn = sliderEl.querySelector("[data-fls-slider-more-btn]") || sliderEl.querySelector(".hero-gallery__more-btn");
+    const placeholderSlide = wrapperEl.querySelector(".hero-gallery__slide:not([data-fls-slider-more])");
+    let heroGallerySwiper = null;
+    let currentPage = 0;
+    let totalPages = 1;
+    let isLoading = false;
+    let isInitialLoaded = false;
+    const loadedCaseKeys = /* @__PURE__ */ new Set();
+    wrapperEl.querySelectorAll(".hero-gallery__slide[data-case-key]").forEach((slide) => {
+      const key = slide.getAttribute("data-case-key");
+      if (key) loadedCaseKeys.add(String(key));
+    });
+    async function fetchPosts(page = 1) {
+      const url = new URL(HERO_GALLERY_API_URL);
+      url.searchParams.set("per_page", HERO_GALLERY_PER_PAGE);
+      url.searchParams.set("page", page);
+      url.searchParams.set("_embed", "1");
+      const response = await fetch(url.toString(), {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      if (!response.ok) {
+        throw new Error(`Failed to load posts. Status: ${response.status}`);
+      }
+      const posts = await response.json();
+      const total = parseInt(response.headers.get("X-WP-TotalPages") || "1", 10);
+      return {
+        posts,
+        totalPages: total
+      };
+    }
+    async function loadHeroGalleryPosts({ initial = false } = {}) {
+      if (isLoading) return;
+      isLoading = true;
+      setHeroGalleryLoadingState(true);
+      if (heroGallerySwiper?.autoplay?.running) {
+        heroGallerySwiper.autoplay.stop();
+      }
+      try {
+        const nextPage = initial ? 1 : currentPage + 1;
+        const prevRealSlidesCount = wrapperEl.querySelectorAll(".hero-gallery__slide:not([data-fls-slider-more])").length;
+        const { posts, totalPages: fetchedTotalPages } = await fetchPosts(nextPage);
+        totalPages = fetchedTotalPages;
+        if (initial) {
+          removePlaceholderSlide();
+        }
+        const addedSlidesCount = appendSlidesToHeroGallery(posts);
+        currentPage = nextPage;
+        updateLoadMoreVisibility();
+        if (!addedSlidesCount) {
+          if (initial) {
+            isInitialLoaded = true;
+          }
+          return;
+        }
+        updateSwiperAfterDomChange();
+        if (initial) {
+          heroGallerySwiper.slideTo(0, 0, false);
+          if (heroGallerySwiper.params.autoplay) {
+            heroGallerySwiper.autoplay.start();
+          }
+          isInitialLoaded = true;
+        } else {
+          const firstNewSlideIndex = prevRealSlidesCount;
+          heroGallerySwiper.slideTo(firstNewSlideIndex, 700, false);
+          if (heroGallerySwiper.params.autoplay) {
+            heroGallerySwiper.autoplay.start();
+          }
+        }
+      } catch (error) {
+        console.error("Hero gallery load error:", error);
+      } finally {
+        isLoading = false;
+        setHeroGalleryLoadingState(false);
+      }
+    }
+    heroGallerySwiper = new Swiper(".hero-gallery__slider", {
       modules: [Navigation, Autoplay, EffectCoverflow],
+      // modules: [Navigation,  EffectCoverflow],
       observer: true,
       observeParents: true,
       speed: 1200,
@@ -140,7 +341,6 @@ function initSliders() {
       },
       breakpoints: {
         320: {
-          // spaceBetween: 16,
           coverflowEffect: {
             depth: 0,
             modifier: 1,
@@ -154,44 +354,48 @@ function initSliders() {
           coverflowEffect: {
             depth: 100,
             modifier: 1,
-            // scale: 1.2,
             scale: 0.95,
             rotate: 0,
             slideShadows: false,
-            // stretch: -140,
             stretch: -70
-            // stretch: '-25%',
           }
         }
       },
       on: {
         init(swiper) {
-          updateHeroGalleryImages(swiper);
-          const progressLine = swiper.el.querySelector(".slider-progress span");
-          if (progressLine) {
-            progressLine.style.width = "0%";
+          updateHeroGallerySlideVisuals(swiper);
+          resetSliderAutoplayProgress(swiper);
+          if (swiper.autoplay?.running) {
+            swiper.autoplay.stop();
           }
+          loadHeroGalleryPosts({ initial: true });
         },
         progress(swiper) {
-          updateHeroGalleryImages(swiper);
+          updateHeroGallerySlideVisuals(swiper);
         },
         setTransition(swiper, duration) {
-          setHeroGalleryImagesTransition(swiper, duration);
+          setHeroGallerySlideTransition(swiper, duration);
         },
         resize(swiper) {
-          updateHeroGalleryImages(swiper);
+          updateHeroGallerySlideVisuals(swiper);
         },
         autoplayTimeLeft(swiper, timeLeft, progress) {
-          updateHeroGalleryAutoplayProgress(swiper, progress);
+          updateSliderAutoplayProgress(swiper, progress);
         },
         slideChangeTransitionStart(swiper) {
-          const progressLine = swiper.el.querySelector(".slider-progress span");
-          if (progressLine) {
-            progressLine.style.width = "0%";
-          }
+          resetSliderAutoplayProgress(swiper);
         }
       }
     });
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
+        if (isLoading) return;
+        if (!isInitialLoaded) return;
+        if (currentPage >= totalPages) return;
+        await loadHeroGalleryPosts({ initial: false });
+      });
+    }
   }
   if (document.querySelector(".solutions__slider")) {
     new Swiper(".solutions__slider", {
@@ -215,19 +419,13 @@ function initSliders() {
       },
       on: {
         init(swiper) {
-          const progressLine = swiper.el.querySelector(".slider-progress span");
-          if (progressLine) {
-            progressLine.style.width = "0%";
-          }
+          resetSliderAutoplayProgress(swiper);
         },
         autoplayTimeLeft(swiper, timeLeft, progress) {
-          updateHeroGalleryAutoplayProgress(swiper, progress);
+          updateSliderAutoplayProgress(swiper, progress);
         },
         slideChangeTransitionStart(swiper) {
-          const progressLine = swiper.el.querySelector(".slider-progress span");
-          if (progressLine) {
-            progressLine.style.width = "0%";
-          }
+          resetSliderAutoplayProgress(swiper);
         }
       }
     });
