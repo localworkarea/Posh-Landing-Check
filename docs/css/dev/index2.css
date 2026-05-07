@@ -2124,6 +2124,13 @@ body {
     max-width: 90%;
   }
 }
+@media (max-width: 37.56125em) {
+  .spollers-process__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
 @media (max-width: 30.06125em) {
   .menu__pulse {
     min-height: 2.25rem;
@@ -2204,9 +2211,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-  }
-  .spollers-process__media img {
-    margin-top: 1.25rem;
+    padding: 1.25rem;
   }
   .retail__bg {
     max-width: 11.25rem;
