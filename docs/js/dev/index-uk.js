@@ -1,6 +1,7 @@
 import "./popup.min.js";
 import "./index.min2.js";
 import { b as bodyLockStatus, a as bodyLockToggle } from "./common.min.js";
+/* empty css          */
 function menuInit() {
   document.addEventListener("click", function(e) {
     if (bodyLockStatus && e.target.closest("[data-fls-menu]")) {

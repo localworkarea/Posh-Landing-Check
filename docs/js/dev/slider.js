@@ -144,6 +144,13 @@ function initSliders() {
     };
     const HERO_GALLERY_API_URL = "https://posh.pro/wp-json/wp/v2/case";
     const HERO_GALLERY_PER_PAGE = 10;
+    const PAGE_LANG = (() => {
+      const htmlLang = document.documentElement.lang?.trim().toLowerCase() || "en";
+      if (htmlLang.startsWith("ru")) return "ru";
+      if (htmlLang.startsWith("uk") || htmlLang.startsWith("ua")) return "uk";
+      return "en";
+    })();
+    console.log("Hero gallery language:", PAGE_LANG);
     const sliderEl = document.querySelector(".hero-gallery__slider");
     if (!sliderEl) return;
     if (sliderEl.dataset.heroGalleryInited === "true") {
@@ -172,25 +179,51 @@ function initSliders() {
       const key = slide.getAttribute("data-case-key");
       if (key) loadedCaseKeys.add(String(key));
     });
-    async function fetchPosts(page = 1) {
-      const url = new URL(HERO_GALLERY_API_URL);
-      url.searchParams.set("per_page", HERO_GALLERY_PER_PAGE);
-      url.searchParams.set("page", page);
-      url.searchParams.set("_embed", "1");
-      const response = await fetch(url.toString(), {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json"
+    async function fetchPosts(page = 1, neededCount = HERO_GALLERY_PER_PAGE) {
+      let apiPage = page;
+      let collectedPosts = [];
+      let apiTotalPages = 1;
+      while (collectedPosts.length < neededCount) {
+        const url = new URL(HERO_GALLERY_API_URL);
+        url.searchParams.set("per_page", HERO_GALLERY_PER_PAGE);
+        url.searchParams.set("page", apiPage);
+        url.searchParams.set("_embed", "1");
+        url.searchParams.set("lang", PAGE_LANG);
+        const response = await fetch(url.toString(), {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        if (!response.ok) {
+          throw new Error(`Failed to load posts. Status: ${response.status}`);
         }
-      });
-      if (!response.ok) {
-        throw new Error(`Failed to load posts. Status: ${response.status}`);
+        const posts = await response.json();
+        apiTotalPages = parseInt(response.headers.get("X-WP-TotalPages") || "1", 10);
+        if (!posts.length) {
+          break;
+        }
+        for (const post of posts) {
+          const desktopUrl = getDesktopImageUrl(post);
+          if (!desktopUrl) continue;
+          const caseKey = String(getCaseUniqueKey(post));
+          if (!caseKey) continue;
+          if (loadedCaseKeys.has(caseKey)) continue;
+          if (collectedPosts.some((item) => String(getCaseUniqueKey(item)) === caseKey)) continue;
+          collectedPosts.push(post);
+          if (collectedPosts.length >= neededCount) {
+            break;
+          }
+        }
+        if (apiPage >= apiTotalPages) {
+          break;
+        }
+        apiPage++;
       }
-      const posts = await response.json();
-      const total = parseInt(response.headers.get("X-WP-TotalPages") || "1", 10);
       return {
-        posts,
-        totalPages: total
+        posts: collectedPosts,
+        totalPages: apiTotalPages,
+        lastFetchedPage: apiPage
       };
     }
     async function loadHeroGalleryPosts({ initial = false } = {}) {
@@ -203,13 +236,17 @@ function initSliders() {
       try {
         const nextPage = initial ? 1 : currentPage + 1;
         const prevRealSlidesCount = wrapperEl.querySelectorAll(".hero-gallery__slide:not([data-fls-slider-more])").length;
-        const { posts, totalPages: fetchedTotalPages } = await fetchPosts(nextPage);
+        const {
+          posts,
+          totalPages: fetchedTotalPages,
+          lastFetchedPage
+        } = await fetchPosts(nextPage, HERO_GALLERY_PER_PAGE);
         totalPages = fetchedTotalPages;
         if (initial) {
           removePlaceholderSlide();
         }
         const addedSlidesCount = appendSlidesToHeroGallery(posts);
-        currentPage = nextPage;
+        currentPage = lastFetchedPage;
         updateLoadMoreVisibility();
         if (!addedSlidesCount) {
           if (initial) {

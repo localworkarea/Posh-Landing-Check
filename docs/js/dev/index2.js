@@ -589,7 +589,7 @@ function initPromoPopupVideo() {
     clearTimeout(resetTimeout);
     loadVideoSources();
     video.muted = false;
-    video.volume = 0.3;
+    video.volume = 0.1;
     video.currentTime = 0;
     video.play().catch(() => {
       video.muted = true;

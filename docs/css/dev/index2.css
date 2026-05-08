@@ -718,7 +718,7 @@ body {
 }
 
 .hero-gallery {
-  padding-block: 0 5.625rem;
+  padding-block: 0 2.8125rem;
 }
 .hero-gallery__slider.swiper {
   overflow: visible;
@@ -730,11 +730,15 @@ body {
   will-change: opacity, transform;
   user-select: none;
 }
+.--loading .hero-gallery__slide:not(.swiper-slide-active) .hero-gallery__image {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
 .hero-gallery__image {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  transition: opacity 0.2s ease 0s;
+  transition: transform 0.65s ease 0s;
 }
 .hero-gallery__image picture {
   display: block;
@@ -754,23 +758,22 @@ body {
   position: relative;
   overflow: hidden;
 }
-.hero-gallery__more::before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  background-image: url("../assets/img/cases/case-20.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: blur(0.3125rem);
-}
 .hero-gallery__more-btn {
   position: relative;
   z-index: 2;
 }
 .hero-gallery__more-btn.btn.btn--4 {
+  min-height: 3.875rem;
+  font-size: 1.375rem;
+  padding-left: 2.625rem;
   padding-left: 0.5rem;
+}
+.hero-gallery__more-btn.btn.btn--4 .btn-txt {
+  text-align: left;
+}
+.hero-gallery__more-btn.btn.btn--4 .btn-arr {
+  width: 3.1875rem;
+  font-size: 1rem;
 }
 .hero-gallery__progress {
   margin-top: 3.125rem;
@@ -1335,8 +1338,8 @@ body {
   line-height: 1.5;
 }
 .products__img {
-  height: 2.8125rem;
-  margin-right: 2.5rem;
+  height: 3.75rem;
+  margin-right: 3.125rem;
 }
 .products__img img {
   height: 100%;
@@ -1498,6 +1501,7 @@ body {
 .banner__title {
   font-weight: 400;
   margin-bottom: 0.9375rem;
+  text-align: center;
 }
 .banner__img {
   position: relative;
@@ -1507,8 +1511,8 @@ body {
   flex: 0 0 4.5rem;
   width: 4.5rem;
   height: 4.5rem;
-  margin-right: 0.625rem;
   vertical-align: text-bottom;
+  margin-left: 0.625rem;
 }
 .banner__img::after {
   content: "";
@@ -1532,6 +1536,7 @@ body {
   font-weight: 400;
   font-size: 0.875rem;
   text-wrap: balance;
+  text-align: center;
 }
 .banner__contacts {
   display: flex;
@@ -1686,6 +1691,11 @@ body {
   width: 11.875rem;
   height: 11.875rem;
   aspect-ratio: 1;
+}
+.spollers-process__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .spollers-process__media canvas {
   position: absolute;
@@ -1886,8 +1896,8 @@ body {
   margin-top: 3.75rem;
 }
 .retail__img {
-  height: 2.8125rem;
-  margin-right: 2.5rem;
+  height: 3.75rem;
+  margin-right: 3.125rem;
 }
 .retail__img img {
   height: 100%;
@@ -1938,7 +1948,6 @@ body {
   color: var(--white);
   gap: 1.125rem;
   font-size: 0.875rem;
-  padding-left: 1rem;
 }
 .scrollto__btn .scrollto-ic {
   position: relative;
@@ -2130,7 +2139,7 @@ body {
   .banner__social {
     position: absolute;
     top: -1.25rem;
-    left: 9.375rem;
+    right: 1.875rem;
   }
   .banner__btn {
     margin-bottom: -1.5625rem;
@@ -2163,13 +2172,6 @@ body {
   }
   .banner-cta__title {
     max-width: 90%;
-  }
-}
-@media (max-width: 37.56125em) {
-  .spollers-process__media img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
   }
 }
 @media (max-width: 30.06125em) {
@@ -2258,7 +2260,6 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 1.25rem;
   }
   .retail__bg {
     max-width: 11.25rem;
@@ -2270,9 +2271,6 @@ body {
   }
   .team-solutions__scrollto .scrollto__btn {
     max-width: 100%;
-  }
-  .scrollto__btn .scrollto-ic:nth-child(1) {
-    display: none;
   }
 }
 @media (max-width: 25.06125em) {
@@ -2448,6 +2446,9 @@ body {
   .footer-hero__play-btn {
     width: 3.625rem;
   }
+  .hero-gallery {
+    padding-block: 0 5.625rem;
+  }
   .hero-gallery__slider {
     max-width: 55rem;
     margin-inline: auto;
@@ -2466,9 +2467,6 @@ body {
   }
   .hero-gallery__image img {
     aspect-ratio: 813/494;
-  }
-  .hero-gallery__more {
-    border-radius: 3.125rem;
   }
   .estimate-section__title {
     font-weight: 400;
@@ -2569,8 +2567,10 @@ body {
   }
   .banner__title {
     margin-bottom: 1.1875rem;
+    text-align: left;
   }
   .banner__subtitle {
+    text-align: left;
     font-size: 1rem;
   }
   .presentation-solutions__txt {
@@ -2714,7 +2714,6 @@ body {
   }
   .spollers-process__content {
     display: grid;
-    align-items: center;
     grid-template-columns: 55% 1fr;
     padding-top: 1.125rem;
     margin-left: 7.125rem;
@@ -3046,6 +3045,10 @@ body {
   }
   .banner__block {
     flex-direction: row;
+  }
+  .banner__img {
+    margin-right: 0.625rem;
+    margin-left: 0;
   }
   .fill-form__body {
     display: flex;
