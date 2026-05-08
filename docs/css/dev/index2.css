@@ -2714,6 +2714,7 @@ body {
   }
   .spollers-process__content {
     display: grid;
+    align-items: center;
     grid-template-columns: 55% 1fr;
     padding-top: 1.125rem;
     margin-left: 7.125rem;
